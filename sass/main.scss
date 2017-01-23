@@ -24,6 +24,7 @@ body {
     height: auto;
     table-layout: fixed;
     min-height: 100vh;
+    max-width: 1200px;
     overflow-x: hidden;
 
     table-layout: fixed;
@@ -33,15 +34,31 @@ body {
 }
 
 .footer {
-    @include flex-center;
     color: $light-gray;
+    background: $dark-gray;
+    padding: 3em;
 }
 
 .footer span {
-    font-size: 0.75em;
     text-align: center;
+<<<<<<< HEAD
     // ---------------------- Media queries
     @include breakpoint(medium) {
         font-size: $text-size;
     }
 }
+=======
+}
+
+.logo {
+    height: 5.5em;
+    width: 4em;
+}
+
+header {
+    z-index: 9;
+    position: fixed;
+    width: 80%;
+    max-width: 960px;
+}
+>>>>>>> master
