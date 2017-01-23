@@ -7,3 +7,33 @@
 @import "contact";
 @import "about";
 @import "work";
+html {
+    height: 100%;
+}
+
+body {
+    background: $red;
+    min-height: 100vh;
+}
+
+.wrapper {
+    background: $dark-gray;
+    height: auto;
+    table-layout: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.footer {
+    @include flex-center;
+    color: $light-gray;
+}
+
+.footer span {
+    font-size: 0.75em;
+    text-align: center;
+    // ---------------------- Media queries
+    @include breakpoint(medium) {
+        font-size: $text-size;
+    }
+}

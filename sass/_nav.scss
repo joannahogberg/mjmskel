@@ -1,0 +1,70 @@
+    /*------------------------navigation*/
+    /* Mobile Navigation */
+    
+    #menu {
+        height: 5.5em;
+        width: 4em;
+        position: fixed;
+        // top: -0.3em;
+        top: 0.5em;
+        right: $main-margin;
+        /* z-index 11 to alwaus stay on top*/
+        z-index: 11;
+        // ---------------------- Media queries
+        @include breakpoint(medium) {
+            height: 6em;
+            width: 4.5em;
+            top: -0.5em;
+        }
+        // ---------------------- Media queries
+        @include breakpoint(large) {
+            visibility: hidden;
+        }
+    }
+    
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        top: $main-margin;
+        background: $red;
+        overflow-x: hidden;
+        padding-top: 2em;
+        @include transform(skew(-15deg));
+        @include transition(0.5s);
+        display: flex;
+        justify-content: center;
+    }
+    
+    .overlay-content {
+        @include flex-center;
+        flex-direction: column;
+        margin-top: 2em;
+        @include transform(skew(15deg));
+    }
+    
+    .overlay a {
+        padding: $gutter /2;
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        transition: 0.5s;
+        // ---------------------- Media queries
+        @include breakpoint(medium) {
+            font-size: 2em;
+        }
+    }
+    
+    .overlay a:hover,
+    .overlay a:focus {
+        color: $light-gray;
+    }
+    
+    .arrow-nav {
+        cursor: pointer;
+        height: 1.5em;
+        margin: 1em;
+    }
