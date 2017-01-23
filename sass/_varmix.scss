@@ -1,0 +1,181 @@
+/*Sass variables*/
+
+$yellow: #f8fba2;
+$light-green:#c2fcd9;
+$medium-green: #a0e4b0;
+$red: #fa7f7f;
+$dark-gray:#2E3641;
+$medium-gray:#9EB2C0;
+$light-gray: #CCD7E4;
+$text-size: 16px;
+$heading-face: 'Montserrat',
+sans-serif;
+$text-face: 'Playfair Display',
+serif;
+$gutter: 16px;
+$main-margin: 24px;
+
+/*------------- Breakpoints mixin*/
+
+$breakpoints: ( 'xsmall': ( min-width: 375px), 'small': ( min-width: 464px), 'medium': ( min-width: 704px), 'large': ( min-width: 900px), 'xlarge': ( min-width: 1200px));
+@mixin breakpoint($name) {
+    @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+    @else {
+        @warn "No breakpoint with this name `#{$name}`.";
+    }
+}
+
+
+/*------------- Heading mixins*/
+
+@mixin heading {
+    font-family: $heading-face;
+    line-height: 1.5;
+}
+
+@mixin heading-1 {
+    @include heading;
+    font-size: 3em;
+}
+
+@mixin heading-2 {
+    @include heading;
+    font-size: 2.5em;
+}
+
+@mixin heading-3 {
+    @include heading;
+    font-size: 2em;
+}
+
+@mixin heading-4 {
+    @include heading;
+    font-size: 1.5em;
+}
+
+@mixin heading-5 {
+    @include heading;
+    font-size: 1.2em;
+}
+
+@mixin heading-6 {
+    @include heading;
+    font-size: 0.5em;
+}
+
+
+/*------------- Flexbox center mixin*/
+
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*---------------Mixins for transforms, transitions and animations*/
+
+@mixin transition($time) {
+    -webkit-transition: $time;
+    -moz-transition: $time;
+    -ms-transition: $time;
+    -o-transition: $time;
+    transition: $time;
+}
+
+@mixin transition-delay($time) {
+    -webkit-transition-delay: $time;
+    -moz-transition-delay: $time;
+    -ms-transition-delay: $time;
+    -o-transition-delay: $time;
+    transition-delay: $time;
+}
+
+@mixin transform-style($style) {
+    -webkit-transform-style: $style;
+    -moz-transform-style: $style;
+    -ms-transform-style: $style;
+    -o-transform-style: $style;
+    transform-style: $style;
+}
+
+@mixin backface-visibility($visibility: hidden) {
+    -webkit-backface-visibility: $visibility;
+    -moz-backface-visibility: $visibility;
+    -ms-backface-visibility: $visibility;
+    -o-backface-visibility: $visibility;
+    backface-visibility: $visibility;
+}
+
+@mixin transform($transformation) {
+    -webkit-transform: $transformation;
+    -moz-transform: $transformation;
+    -ms-transform: $transformation;
+    -o-transform: $transformation;
+    transform: $transformation;
+}
+
+
+/*Mixin for animation on contact page*/
+
+@mixin keyframe ($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($animation, $duration, $forwards, $iteration) {
+    -webkit-animation-name: #{$animation};
+    -webkit-animation-duration: #{$duration};
+    -webkit-animation-fill-mode: #{$forwards};
+    -webkit-animation-iteration-count: #{$iteration};
+    /* forward prevents the animation from restarting! */
+    -moz-animation-name:#{$animation};
+    -moz-animation-duration: #{$duration};
+    -moz-animation-fill-mode: #{$forwards};
+    -moz-animation-iteration-count: #{$iteration};
+    -ms-animation-name:#{$animation};
+    -ms-animation-duration: #{$duration};
+    -ms-animation-fill-mode: #{$forwards};
+    -ms-animation-iteration-count: #{$iteration};
+    -o-animation-name: #{$animation};
+    -o-animation-duration: #{$duration};
+    -o-animation-fill-mode: #{$forwards};
+    -o-animation-iteration-count:#{$iteration};
+    animation-name: #{$animation};
+    animation-duration: #{$duration};
+    animation-fill-mode: #{$forwards};
+    animation-iteration-count: #{$iteration};
+}
+
+
+/* MIX INS FOR HIDE & SHOW */
+
+@mixin fade($type) {
+    @if $type=='hide' {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 1s, opacity 1s;
+    }
+    @else if $type=='show' {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 1s, opacity 1s;
+    }
+}
