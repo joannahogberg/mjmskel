@@ -9,7 +9,7 @@
     <title>MJM CONTACT</title>
     <meta name="description" content="">
     <meta name="author" content="">
-    <noscript>Unfortunately your browser does not support JavaScript. Please try another browser</noscript>
+
 
     <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -26,9 +26,6 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
 
@@ -45,14 +42,15 @@
         </div>-->
 
 
+        <noscript>Unfortunately your browser does not support JavaScript. Please try another browser</noscript>
 
 
-        <label for="nav-burger" onclick="openNav()">
+        <div class="seven columns">
+            <label for="nav-burger" onclick="openNav()">
             <img class="two columns" id="menu" src="images/lastburger.svg" alt="menuburger">
-
 	</label>
-        <!-- The fullscreen overlay nav-menu-->
-
+            <!-- The fullscreen overlay nav-menu-->
+        </div>
 
         <div id="navBar" class="overlay">
 
@@ -91,48 +89,55 @@
 
 
 
-        <div class="twelve columns yellow_topbox">
-            <section class="contact-section-1 six columns">
-                <h3 class="contact-hero">For a better digital world, please get in touch!</h3>
-
-            </section>
+        <div class="yellow_topbox">
+            <div class="yellow_container">
 
 
+                <section class="contact-section-1 one-half column">
+                    <h3 class="contact-hero">For a better digital world, please get in touch!</h3>
 
-            <div class="container-circles six columns">
+                </section>
 
-                <div class="contact_circle" onclick="">
-                    <div class="info">
-                        <div class="front face">
-                            <img class="info_icon one columns" src="images/address.png" alt="logo">
+
+
+                <div class="container-circles row">
+                    <div class="one-half column">
+
+
+
+                        <div class="contact_circle one-third column" onclick="">
+                            <div class="info">
+                                <div class="front face">
+                                    <img class="info_icon u-max-full-width" src="images/address.png" alt="logo">
+                                </div>
+                                <div class="back face">
+                                    <span class="contact-text">St:Eriksgatan XX <br/> 112 39 Stockholm</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="back face">
-                            <span class="contact-text">St:Eriksgatan XX <br/> 112 39 Stockholm</span>
+
+                        <div class="contact_circle one-third column" onclick="">
+                            <div class="info">
+                                <div class="front face">
+                                    <img class="info_icon u-max-full-width" src="images/phone.png" alt="logo">
+                                </div>
+                                <div class="back face">
+                                    <span class="contact-text">070-XXX XX XX</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact_circle one-third column" onclick="">
+                            <div class="info">
+                                <div class="front face">
+                                    <img class="info_icon u-max-full-width" src="images/email.png" alt="logo">
+                                </div>
+                                <div class="back face">
+                                    <span class="contact-text">contact@mjm.com</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="contact_circle" onclick="">
-                    <div class="info">
-                        <div class="front face">
-                            <img class="info_icon one columns" src="images/phone.png" alt="logo">
-                        </div>
-                        <div class="back face">
-                            <span class="contact-text">070-XXX XX XX</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact_circle" onclick="">
-                    <div class="info">
-                        <div class="front face">
-                            <img class="info_icon one columns" src="images/email.png" alt="logo">
-                        </div>
-                        <div class="back face">
-                            <span class="contact-text">contact@mjm.com</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
 

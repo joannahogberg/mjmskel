@@ -1,0 +1,92 @@
+.yellow_topbox {
+    background: $yellow;
+    position: relative;
+    left: -40vw;
+    width: 180vw;
+    height: 26rem;
+    margin: 0 auto;
+    margin-top: 10em;
+    z-index: 2;
+    @include transform(rotate(25deg));
+}
+
+.yellow_container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 50%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact_circle {
+    position: relative;
+    background: $red;
+    border-radius: 50%;
+    width: 6em;
+    height: 6em;
+    border: 0.5em solid $dark-gray;
+    @include transform(rotate(-25deg));
+    &:first-child {
+        background: $light-gray;
+    }
+    &:last-child {
+        background: $medium-green;
+    }
+    &:hover {
+        z-index: 30;
+        cursor: pointer;
+        @include transform(scale(1.7));
+        @include transition(all 1s ease);
+    }
+    @include breakpoint(medium) {
+        width: 7em;
+        height: 7em;
+    }
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    @include transform-style(preserve-3d);
+    @include transition(all 1.0s linear);
+}
+
+.contact_circle:hover .info {
+    @include transform(rotateY(180deg));
+    @include backface-visibility(hidden);
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include backface-visibility(hidden);
+}
+
+.face.back {
+    @include transform(rotateY(180deg));
+    text-align: center;
+}
+
+.contact-text {
+    font-size: 0.5rem;
+    @include transform(rotate(-25deg));
+    // ---------------------- Media queries
+    @include breakpoint(xsmall) {
+        font-size: 0.6rem;
+    }
+    @include breakpoint(medium) {
+        font-size: 0.7rem;
+        @include transform(rotate(-60deg));
+    }
+    @include breakpoint(medium) {
+        font-size: 0.8rem;
+        padding: 0.2rem;
+        @include transform(rotate(-60deg));
+    }
+}
+
+.contact-hero {
+    @include transform(rotate(-25deg));
+}
