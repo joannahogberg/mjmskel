@@ -5,5 +5,21 @@
 /*---------------Mixins for transforms, transitions and animations*/
 /*Mixin for animation on contact page*/
 /* MIX INS FOR HIDE & SHOW */
+.landing-box {
+  width: 180vw;
+  background: #f8fba2;
+  height: 26em;
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  -o-transform: rotate(25deg);
+  transform: rotate(25deg); }
+
+.container-hero {
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg); }
 
 /*# sourceMappingURL=main.css.map */

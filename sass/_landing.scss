@@ -1,0 +1,12 @@
+//Skeleton landing.scss
+
+.landing-box {
+  width: 180vw;
+  background: $yellow;
+  height: 26em;
+  @include transform(rotate(25deg));
+}
+
+.container-hero {
+  @include transform(rotate(-25deg));
+}
