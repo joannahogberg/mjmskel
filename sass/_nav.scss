@@ -11,15 +11,16 @@
         /* z-index 11 to alwaus stay on top*/
         z-index: 11;
         // ---------------------- Media queries
-        @include breakpoint(medium) {
+        @include breakpoint(small) {
             height: 6em;
             width: 4.5em;
             top: -0.5em;
-        }
-        // ---------------------- Media queries
-        @include breakpoint(large) {
             visibility: hidden;
         }
+        // ---------------------- Media queries
+        // @include breakpoint(large) {
+        //     visibility: hidden;
+        // }
     }
     
     .overlay {
@@ -67,4 +68,30 @@
         cursor: pointer;
         height: 1.5em;
         margin: 1em;
+    }
+    
+    .header_nav {
+        visibility: hidden;
+        // ---------------------- Media queries
+        @include breakpoint(small) {
+            visibility: visible;
+        }
+    }
+    
+    @include keyframe (head-fade) {
+        from {
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .nav_background {
+        @include breakpoint(small) {
+            width: 80%;
+            max-width: 960px;
+            background: $dark-gray;
+            @include animation(head-fade, 2s, forwards, 1);
+        }
     }
