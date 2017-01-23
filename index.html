@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>MJM</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+
+<body>
+
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container wrapper" id="scroll" onscroll="navFunc()">
+        <!--<div class="row">
+            <div class="one-half column" style="margin-top: 25%">
+                <h4>Basic Page</h4>
+                <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+            </div>
+        </div>-->
+
+
+
+
+        <label for="nav-burger" onclick="openNav()">
+            <img class="two columns" id="menu" src="images/lastburger.svg" alt="menuburger">
+
+	</label>
+        <!-- The fullscreen overlay nav-menu-->
+
+
+        <div id="navBar" class="overlay">
+
+            <!-- Overlay menu -->
+            <div class="overlay-content">
+                <a href="index.html">HOME</a>
+                <a href="index.html#about">ABOUT</a>
+                <a href="index.html#work" onclick="closeNav()">WORK</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <!--&times;-->
+                    <img class="arrow-nav" src="images/arrow.svg" alt="close">
+                </a>
+            </div>
+
+
+        </div>
+        <header id="top">
+            <div class="header row ">
+
+
+                <a href="index.html" class="seven columns">
+
+                    <svg class="logo two columns" id="logoMJM" data-name="logoMJM" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.35 95.35"><defs><style>.cls-1{fill:#2e3641;}.cls-2{fill:#fff;}</style></defs><title>LogoMJMtextcolor</title><polygon class="cls-1" points="0 48.12 14.28 81.7 48.12 95.35 81.7 81.07 95.35 47.23 81.07 13.65 47.23 0 13.65 14.28 0 48.12"/><path class="cls-2" d="M44.57,44.44l27.1-9.58v-.18c-1,.06-2.11.18-3.13.24s-1.81.12-2.83.12-1.87.06-2.65.06H44.57V31.43l32.1-.06v5.9l-26,8.86v.12l26,8.86V61l-32,.06V57.4H63.37c.72,0,1.57,0,2.53.06s1.87.06,2.71.12c1,.06,2,.12,3.07.12v-.15L44.57,48.66Z"/><path class="cls-2" d="M50.67,48.06,23.6,57.55v.18c1.07,0,2.07-.18,3.13-.18s1.81-.12,2.83-.12,1.87-.06,2.65-.06H50.67v3.68h-32v-5.9l25.85-8.8v-.12l-25.85-8.9v-5.9h32v3.68H31.91c-.72,0-1.57,0-2.53-.06s-1.87-.06-2.71-.12c-1-.06-2-.12-3.07-.12V35l27.07,8.85Z"/><path class="cls-2" d="M41.61,74.55a14,14,0,0,1-1.75-.12l-1.33-.36V70.55a8.69,8.69,0,0,0,1.45.3,14.77,14.77,0,0,0,1.63.12,5.94,5.94,0,0,0,1.45-.18A3,3,0,0,0,44.39,70a3.43,3.43,0,0,0,1-1.51,7.13,7.13,0,0,0,.28-2.43V33.9h3.8V65.55a11,11,0,0,1-.6,4,6.64,6.64,0,0,1-1.63,2.77,6.79,6.79,0,0,1-2.47,1.63A9.12,9.12,0,0,1,41.61,74.55Z"/></svg>
+
+
+                </a>
+                <nav class="header_nav five columns">
+
+                    <a href="index.html#about" class="nav_link">ABOUT</a>
+                    <a href="index.html#work" class="nav_link">WORK</a>
+                    <a href="contact.html" class="nav_link" id="thissection">CONTACT</a>
+                </nav>
+            </div>
+        </header>
+        <!--LANDING PAGE-->
+        <section class="landing-box">
+
+            <section class="container-hero">
+                <div class="flex-hero">
+                    <figure class="figure hover-figure" id="magnus">
+                        <h1 class="hero-h1">M</h1>
+                        <h2 class="profile-text profile-name">Magnus Öhrström</h2>
+                        <span class="profile-text" id="magnus-text">"Front-End Developer with a background in arts and crafts and a keen interest in form and function."</span>
+                        <a class="ghlink" target="blank" href="https://joannahogberg.github.io">
+                            <img src="images/ghicon.svg" class="ghicon" alt="hej" />
+                        </a>
+                        <img class="arrow child" src="images/arrow.svg" alt="" />
+                        <div class="figure filter">
+                        </div>
+                    </figure>
+                    <figure class="figure hover-figure" id="joanna">
+                        <h1 class="hero-h1">J</h1>
+                        <h2 class="profile-text profile-name">Joanna Högberg</h2>
+                        <span class="profile-text" id="joanna-text"> Front-End Developer with a passion for responsive design. Loves turning complex problems into simple, beautiful and interface designs with a focus on writing clean and efficient code.</span>
+                        <a class="ghlink" target="blank" href="https://joannahogberg.github.io">
+                            <img src="images/ghicon.svg" class="ghicon" alt="hej" />
+                        </a>
+                        <img class="arrow" src="images/arrow.svg" alt="">
+                        <div class="figure filter">
+                        </div>
+                    </figure>
+                    <figure class="figure hover-figure" id="max">
+                        <h1 class="hero-h1">M</h1>
+                        <h2 class="profile-text profile-name">Max <br> Jander</h2>
+                        <span class="profile-text" id="max-text">Front-End Developer with a sassy love for a cup of Java.</span>
+
+                        <a class="ghlink" target="blank" href="https://github.com/maxjander">
+                            <img src="images/ghicon.svg" class="ghicon" alt="hej" />
+                        </a>
+                        <img class="arrow" src="images/arrow.svg" alt="">
+                        <div class="figure filter">
+                        </div>
+                    </figure>
+                </div>
+                <section class="hero-text-container">
+                    <h5 class="hero-text">We are dedicated Front-End Developers. Experience your ideas through us.</h5>
+
+                </section>
+            </section>
+        </section>
+
+        <!--Landingpage-END-->
+
+        <!-- About // Magnus-->
+        <section class="about-box skew-box" id="about-id">
+
+
+            <div id="about">
+                <!--div to get anchorpoint correct-->
+            </div>
+            <h2 class="about-h1">About MJM</h2>
+            <article class="about-article">
+                <img src="images/skyline.jpg" class="about-img" alt="">
+                <h4 class="about-h4">Swedishly graceful development</h4>
+                <p class="about-p">
+                    MJM was founded in Stockholm in 2016. We’re a collective of cutting-edge creatives, front-enders, designers and javascripters. <br /> While our society constantly changes MJM strive to always stand at the front line of the creative
+                    technology. We devote our lives to create a better online experience for all our clients, and understand the value of customizing our work to our clients brands. We provide our clients full digital services with focus on the user experience.
+
+                </p>
+                <img src="images/responsive.jpg" class="about-img" alt="">
+
+            </article>
+            <img class="arrow-about" src="images/arrow.svg" alt="" />
+
+        </section>
+
+
+
+
+        <!-- Slut About-->
+
+        <!-- WORK // Max-->
+
+        <section class="work-box skew-box">
+            <div id="work">
+                <!--div to get anchorpoint correct-->
+            </div>
+            <h1 class="about-h1">Work</h1>
+            <input type="checkbox" id="btnControl" />
+            <article class="work-article">
+
+                hejehejhej
+
+            </article>
+            <label class="btn" for="btnControl">
+                read more
+            </label>
+
+        </section>
+
+
+
+
+
+        <!-- Slut Work-->
+    </div>
+    <footer class="footer">
+        <span> &copy; Magnus Öhrström, Joanna Högberg & Max Jander</span>
+    </footer>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/landing.js"></script>
+    <script type="text/javascript" src="scripts/about.js"></script>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
