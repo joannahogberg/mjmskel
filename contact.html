@@ -33,7 +33,7 @@
 
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="container wrapper" id="scroll" onscroll="navFunc()">
+    <div class="wrapper" id="scroll" onscroll="navFunc()">
         <!--<div class="row">
             <div class="one-half column" style="margin-top: 25%">
                 <h4>Basic Page</h4>
@@ -69,7 +69,7 @@
 
         </div>
         <header id="top" class="column">
-            <div class="header column">
+            <div class="header row">
 
 
                 <a href="index.html" class="one-half column">
@@ -90,7 +90,7 @@
 
 
         <div class="yellow_topbox">
-            <div class="yellow_container">
+            <div class="content_container">
 
 
                 <section class="contact-section-1 one-half column">
@@ -106,7 +106,7 @@
 
 
                         <div class="contact_circle one-third column" onclick="">
-                            <div class="info">
+                            <div class="info ">
                                 <div class="front face">
                                     <img class="info_icon u-max-full-width" src="images/address.png" alt="logo">
                                 </div>
@@ -141,14 +141,16 @@
             </div>
         </div>
 
-        <div class="red_midbox">
-            <section class="contact-section-2 six columns">
-                <h4>Let's start something great together!</h4>
-                <p class="darkgray"> If you are curious to hear more about what we can offer, give us a call or...</p>
+        <div class="red_midbox row">
+            <div class="content_container">
+                <section class="contact-section-2 twelve columns">
+                    <h4>Let's start something great together!</h4>
+                    <p class="darkgray"> If you are curious to hear more about what we can offer, give us a call or...</p>
 
 
 
-            </section>
+                </section>
+            </div>
         </div>
 
 
@@ -156,25 +158,25 @@
 
         </div>
 
+        <div class="form_container ">
+            <div class="form_circle twelve columns">
+                <h5 class="hero-form">Drop us a line!</h5>
+                <form class="contactform" name="contactform" method="post" action="X">
 
-        <div class="form_circle eleven columns">
-            <h5 class="hero-form">Drop us a line!</h5>
-            <form class="contactform" name="contactform" method="post" action="X">
+                    <input type="hidden" name="form" value="Message">
+                    <label class="form-label">Name:</label>
+                    <input type="text" name="name" class="text-field" placeholder="Name*" required>
+                    <label class="form-label">E-mail:</label>
+                    <input type="text" name="epost" class="text-field" placeholder="Email*" required>
+                    <label class="form-label">Message:</label>
+                    <textarea name="message" placeholder="Message" class="message"></textarea>
 
-                <input type="hidden" name="form" value="Message">
-                <label class="form-label">Name:</label>
-                <input type="text" name="name" class="text-field" placeholder="Name*" required>
-                <label class="form-label">E-mail:</label>
-                <input type="text" name="epost" class="text-field" placeholder="Email*" required>
-                <label class="form-label">Message:</label>
-                <textarea name="message" placeholder="Message" class="message"></textarea>
-
-                <input type="submit" value="SEND" class="send-button">
-
-
-            </form>
+                    <input type="submit" value="SEND" class="send-button">
 
 
+                </form>
+
+            </div>
         </div>
 
     </div>
