@@ -35,6 +35,7 @@ $breakpoints: ( 'xsmall': ( min-width: 400px), 'small': ( min-width: 550px), 'me
 @mixin heading {
     font-family: $heading-face;
     line-height: 1.5;
+    font-weight: 700;
 }
 
 @mixin heading-1 {

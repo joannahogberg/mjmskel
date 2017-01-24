@@ -36,33 +36,24 @@
     }
 }
 
-// .contact-section-1 {
-//     @include breakpoint(small) {
-//         height: 26rem;
-//     }
-// }
 .container-circles {
     display: flex;
     flex-direction: row;
-    // margin-top: 12em;
-    // margin-left: 1em;
-    // height: 26rem;
     // ---------------------- Media queries
     @include breakpoint(small) {
-        flex-direction: column;
-        // width: 36rem;
-        // height: 26rem;
-        @include transform(rotate(25deg));
+        // flex-direction: column;
+        @include transform(rotate(-50deg));
     }
 }
 
 .contact_circle {
+    @include flex-center;
     position: relative;
     background: $red;
     border-radius: 50%;
     margin: 0 auto;
-    width: 6rem;
-    height: 6rem;
+    width: 10rem;
+    height: 10rem;
     border: 0.5em solid $dark-gray;
     @include transform(rotate(-25deg));
     &:first-child {
@@ -78,10 +69,15 @@
         @include transition(all 1s ease);
     }
     @include breakpoint(small) {
-        // width: 10em;
-        // height: 10em;
+        width: 11rem;
+        height: 11rem;
         @include transform(rotate(25deg));
     }
+}
+
+.front,
+.back {
+    @include flex-center;
 }
 
 .info {
@@ -111,18 +107,8 @@
 .contact-text {
     font-size: 0.5rem;
     @include transform(rotate(-25deg));
-    // ---------------------- Media queries
-    @include breakpoint(xsmall) {
-        font-size: 0.6rem;
-    }
-    @include breakpoint(medium) {
-        font-size: 0.7rem;
-        @include transform(rotate(-60deg));
-    }
-    @include breakpoint(medium) {
-        font-size: 0.8rem;
-        padding: 0.2rem;
-        @include transform(rotate(-60deg));
+    @include breakpoint(small) {
+        @include transform(rotate(25deg));
     }
 }
 
