@@ -1,47 +1,779 @@
-/*
-Error: Invalid CSS after "=======": expected "{", was "}"
-        on line 51 of sass/main.scss
+/*Sass variables*/
+/*------------- Breakpoints mixin*/
+/*------------- Heading mixins*/
+/*------------- Flexbox center mixin*/
+/*---------------Mixins for transforms, transitions and animations*/
+/*Mixin for animation on contact page*/
+/* MIXINS FOR HIDE & SHOW */
+/*--------Landingpage-hero--------------*/
+.landing-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: #f8fba2;
+  width: 180vw;
+  height: 20em;
+  margin-top: 128px;
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  -o-transform: rotate(25deg);
+  transform: rotate(25deg); }
+  @media (min-width: 550px) {
+    .landing-box {
+      margin-top: 128px;
+      height: 26rem; } }
+  @media (min-width: 1000px) {
+    .landing-box {
+      margin-top: 224px; } }
 
-46:     @include breakpoint(medium) {
-47:         font-size: $text-size;
-48:     }
-49: }
-50: =======
-51: }
-52: 
-53: .logo {
-54:     height: 5.5em;
-55:     width: 4em;
-56: }
+.container-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 100%;
+  /*
+height:20em;
+  width:20em;  */
+  width: 110vw;
+  height: 110vw;
+  position: relative;
+  border: 1rem solid #CCD7E4;
+  background: #fa7f7f;
+  background-size: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+  -webkit-transition: all 100s ease;
+  -moz-transition: all 100s ease;
+  -ms-transition: all 100s ease;
+  -o-transition: all 100s ease;
+  transition: all 100s ease; }
+  @media (min-width: 400px) {
+    .container-hero {
+      height: 30em;
+      width: 30em; } }
+  @media (min-width: 1200px) {
+    .container-hero {
+      height: 40rem;
+      width: 40rem; } }
 
-Backtrace:
-sass/main.scss:51
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:656:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"=======\": expected \"{\", was \"}\"\A         on line 51 of sass/main.scss\A \A 46:     @include breakpoint(medium) {\A 47:         font-size: $text-size;\A 48:     }\A 49: }\A 50: =======\A 51: }\A 52: \A 53: .logo {\A 54:     height: 5.5em;\A 55:     width: 4em;\A 56: }"; }
+/*flexboxcontainer for images*/
+.flex-hero {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: space-around;
+  width: 100%;
+  height: 20%; }
+
+/*Elements with images and text about the employee*/
+@-webkit-keyframes figure-start {
+  from {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  to {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); } }
+@-moz-keyframes figure-start {
+  from {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  to {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); } }
+@-ms-keyframes figure-start {
+  from {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  to {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); } }
+@-o-keyframes figure-start {
+  from {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  to {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); } }
+@keyframes figure-start {
+  from {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  to {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); } }
+@-webkit-keyframes figurelight {
+  0% {
+    background: transparent; }
+  50% {
+    background: #CCD7E4; }
+  100% {
+    background: transparent; } }
+@-moz-keyframes figurelight {
+  0% {
+    background: transparent; }
+  50% {
+    background: #CCD7E4; }
+  100% {
+    background: transparent; } }
+@-ms-keyframes figurelight {
+  0% {
+    background: transparent; }
+  50% {
+    background: #CCD7E4; }
+  100% {
+    background: transparent; } }
+@-o-keyframes figurelight {
+  0% {
+    background: transparent; }
+  50% {
+    background: #CCD7E4; }
+  100% {
+    background: transparent; } }
+@keyframes figurelight {
+  0% {
+    background: transparent; }
+  50% {
+    background: #CCD7E4; }
+  100% {
+    background: transparent; } }
+.figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 1;
+  top: 30%;
+  height: 4em;
+  width: 4em;
+  margin: 0 0 1em 0;
+  border-radius: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background: #CCD7E4;
+  text-align: center;
+  position: absolute;
+  /*
+-webkit-perspective: 1000;
+  perspective: 1000;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;  */
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translate(-50%, -50%) rotate(-25deg);
+  -moz-transform: translate(-50%, -50%) rotate(-25deg);
+  -ms-transform: translate(-50%, -50%) rotate(-25deg);
+  -o-transform: translate(-50%, -50%) rotate(-25deg);
+  transform: translate(-50%, -50%) rotate(-25deg);
+  left: 50%;
+  z-index: 10;
+  cursor: pointer; }
+  .figure:first-child {
+    left: 30%; }
+  .figure:last-child {
+    left: 70%; }
+  .figure.is-active {
+    cursor: default;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    top: 50%;
+    left: 50%;
+    overflow: hidden; }
+    .figure.is-active:hover {
+      height: 100%;
+      width: 100%; }
+    .figure.is-active#max {
+      background: url("../images/max2.jpg");
+      background-repeat: no-repeat;
+      background-size: contain; }
+    .figure.is-active#joanna {
+      background: url("../images/joanna2.jpg");
+      background-repeat: no-repeat;
+      background-size: contain; }
+    .figure.is-active#magnus {
+      background: url("../images/magnus2.jpg");
+      background-repeat: no-repeat;
+      background-size: contain; }
+
+.filter {
+  display: none; }
+  .filter.active {
+    position: absolute;
+    display: inline;
+    background: #fa7f7f;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 80;
+    margin-top: 0;
+    opacity: 0.2;
+    cursor: default; }
+
+@-webkit-keyframes figure-fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes figure-fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-ms-keyframes figure-fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes figure-fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes figure-fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.ghlink {
+  display: none;
+  opacity: 0;
+  z-index: 111; }
+  .ghlink.active {
+    display: inline;
+    opacity: 1;
+    -webkit-animation-name: figure-fade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+    /* forward prevents the animation from restarting! */
+    -moz-animation-name: figure-fade;
+    -moz-animation-duration: 2s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-name: figure-fade;
+    -ms-animation-duration: 2s;
+    -ms-animation-fill-mode: forwards;
+    -ms-animation-iteration-count: 1;
+    -o-animation-name: figure-fade;
+    -o-animation-duration: 2s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-iteration-count: 1;
+    animation-name: figure-fade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1; }
+
+.ghicon {
+  opacity: inherit;
+  height: 2em;
+  display: inherit;
+  z-index: 111;
+  position: absolute;
+  bottom: 14.5em;
+  left: 46%; }
+  .ghicon.active {
+    display: inline;
+    cursor: pointer; }
+  .ghicon:hover {
+    cursor: pointer; }
+
+.arrow {
+  display: none;
+  z-index: 111;
+  height: 2em;
+  position: absolute;
+  bottom: 1em;
+  left: 47%;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  opacity: 0;
+  cursor: pointer; }
+  .arrow.active {
+    display: inline;
+    opacity: 1;
+    -webkit-animation-name: figure-fade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+    /* forward prevents the animation from restarting! */
+    -moz-animation-name: figure-fade;
+    -moz-animation-duration: 2s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-name: figure-fade;
+    -ms-animation-duration: 2s;
+    -ms-animation-fill-mode: forwards;
+    -ms-animation-iteration-count: 1;
+    -o-animation-name: figure-fade;
+    -o-animation-duration: 2s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-iteration-count: 1;
+    animation-name: figure-fade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1; }
+  .arrow:hover {
+    cursor: pointer; }
+
+.profile-text {
+  display: none;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  text-align: left;
+  word-wrap: break-word;
+  position: absolute;
+  left: -24%;
+  top: 30%;
+  margin: 2em 8em 0 8em;
+  position: absolute;
+  color: #fff; }
+  .profile-text.active {
+    display: inline;
+    opacity: 1;
+    -webkit-animation-name: figure-fade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+    /* forward prevents the animation from restarting! */
+    -moz-animation-name: figure-fade;
+    -moz-animation-duration: 2s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-name: figure-fade;
+    -ms-animation-duration: 2s;
+    -ms-animation-fill-mode: forwards;
+    -ms-animation-iteration-count: 1;
+    -o-animation-name: figure-fade;
+    -o-animation-duration: 2s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-iteration-count: 1;
+    animation-name: figure-fade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    z-index: 111; }
+
+.profile-name {
+  left: -15%;
+  top: 0%;
+  display: none;
+  font-size: 1.2em;
+  text-align: left;
+  position: absolute; }
+  .profile-name.active {
+    display: inline;
+    opacity: 1;
+    -webkit-animation-name: figure-fade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+    /* forward prevents the animation from restarting! */
+    -moz-animation-name: figure-fade;
+    -moz-animation-duration: 2s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-name: figure-fade;
+    -ms-animation-duration: 2s;
+    -ms-animation-fill-mode: forwards;
+    -ms-animation-iteration-count: 1;
+    -o-animation-name: figure-fade;
+    -o-animation-duration: 2s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-iteration-count: 1;
+    animation-name: figure-fade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    z-index: 111; }
+
+.hero-text-container {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  background: #fff;
+  width: 100%; }
+
+.hero-text {
+  word-wrap: break-word;
+  margin: 0 3em 0 3em;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.2rem; }
+
+.hero-h1 {
+  align-self: center;
+  font-size: 3em;
+  margin: 0;
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  -o-transform: rotate(25deg);
+  transform: rotate(25deg); }
+  .hero-h1.active {
+    opacity: 0; }
+
+/*------------------------navigation*/
+/* Mobile Navigation */
+#menu {
+  height: 5.5em;
+  width: 4em;
+  position: fixed;
+  top: 0.5em;
+  right: 24px;
+  /* z-index 11 to alwaus stay on top*/
+  z-index: 11; }
+  @media (min-width: 550px) {
+    #menu {
+      height: 6em;
+      width: 4.5em;
+      top: -0.5em;
+      visibility: hidden; } }
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  top: 24px;
+  background: #fa7f7f;
+  overflow-x: hidden;
+  padding-top: 2em;
+  -webkit-transform: skew(-15deg);
+  -moz-transform: skew(-15deg);
+  -ms-transform: skew(-15deg);
+  -o-transform: skew(-15deg);
+  transform: skew(-15deg);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center; }
+
+.overlay-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2em;
+  -webkit-transform: skew(15deg);
+  -moz-transform: skew(15deg);
+  -ms-transform: skew(15deg);
+  -o-transform: skew(15deg);
+  transform: skew(15deg); }
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  transition: 0.5s; }
+  @media (min-width: 750px) {
+    .overlay a {
+      font-size: 2em; } }
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #CCD7E4; }
+
+.arrow-nav {
+  cursor: pointer;
+  height: 1.5em;
+  margin: 1em; }
+
+.header_nav {
+  visibility: hidden; }
+  @media (min-width: 550px) {
+    .header_nav {
+      visibility: visible; } }
+
+@-webkit-keyframes head-fade {
+  from {
+    opacity: 0.5; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes head-fade {
+  from {
+    opacity: 0.5; }
+  to {
+    opacity: 1; } }
+@-ms-keyframes head-fade {
+  from {
+    opacity: 0.5; }
+  to {
+    opacity: 1; } }
+@-o-keyframes head-fade {
+  from {
+    opacity: 0.5; }
+  to {
+    opacity: 1; } }
+@keyframes head-fade {
+  from {
+    opacity: 0.5; }
+  to {
+    opacity: 1; } }
+@media (min-width: 550px) {
+  .nav_background {
+    width: 80%;
+    max-width: 960px;
+    background: #2E3641;
+    -webkit-animation-name: head-fade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+    /* forward prevents the animation from restarting! */
+    -moz-animation-name: head-fade;
+    -moz-animation-duration: 2s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-name: head-fade;
+    -ms-animation-duration: 2s;
+    -ms-animation-fill-mode: forwards;
+    -ms-animation-iteration-count: 1;
+    -o-animation-name: head-fade;
+    -o-animation-duration: 2s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-iteration-count: 1;
+    animation-name: head-fade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1; } }
+
+.yellow_topbox {
+  background: #f8fba2;
+  position: relative;
+  left: -40vw;
+  width: 180vw;
+  height: 26rem;
+  margin: 0 auto;
+  margin-top: 10em;
+  z-index: 2;
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  -o-transform: rotate(25deg);
+  transform: rotate(25deg); }
+
+.yellow_container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 50%;
+  max-width: 960px;
+  margin: 0 auto; }
+
+.contact_circle {
+  position: relative;
+  background: #fa7f7f;
+  border-radius: 50%;
+  width: 6em;
+  height: 6em;
+  border: 0.5em solid #2E3641;
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg); }
+  .contact_circle:first-child {
+    background: #CCD7E4; }
+  .contact_circle:last-child {
+    background: #a0e4b0; }
+  .contact_circle:hover {
+    z-index: 30;
+    cursor: pointer;
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -ms-transform: scale(1.7);
+    -o-transform: scale(1.7);
+    transform: scale(1.7);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+  @media (min-width: 750px) {
+    .contact_circle {
+      width: 7em;
+      height: 7em; } }
+
+.info {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear; }
+
+.contact_circle:hover .info {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.face.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  text-align: center; }
+
+.contact-text {
+  font-size: 0.5rem;
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg); }
+  @media (min-width: 400px) {
+    .contact-text {
+      font-size: 0.6rem; } }
+  @media (min-width: 750px) {
+    .contact-text {
+      font-size: 0.7rem;
+      -webkit-transform: rotate(-60deg);
+      -moz-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+      -o-transform: rotate(-60deg);
+      transform: rotate(-60deg); } }
+  @media (min-width: 750px) {
+    .contact-text {
+      font-size: 0.8rem;
+      padding: 0.2rem;
+      -webkit-transform: rotate(-60deg);
+      -moz-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+      -o-transform: rotate(-60deg);
+      transform: rotate(-60deg); } }
+
+.contact-hero {
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg); }
+
+html {
+  height: 100%; }
+
+body {
+  background: #fa7f7f;
+  min-height: 100vh; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #2E3641;
+  height: auto;
+  table-layout: fixed;
+  min-height: 100vh;
+  max-width: 1200px;
+  overflow-x: hidden;
+  table-layout: fixed;
+  max-width: 2560px;
+  margin: 0 auto; }
+
+.footer {
+  color: #CCD7E4;
+  background: #2E3641;
+  padding: 3em; }
+
+.footer span {
+  text-align: center; }
+
+.logo {
+  height: 5.5em;
+  width: 4em; }
+
+header {
+  z-index: 9;
+  position: fixed;
+  width: 80%;
+  max-width: 960px; }
+
+/*# sourceMappingURL=main.css.map */

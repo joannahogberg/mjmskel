@@ -41,13 +41,7 @@ body {
 
 .footer span {
     text-align: center;
-<<<<<<< HEAD
-    // ---------------------- Media queries
-    @include breakpoint(medium) {
-        font-size: $text-size;
-    }
-}
-=======
+
 }
 
 .logo {
@@ -61,4 +55,3 @@ header {
     width: 80%;
     max-width: 960px;
 }
->>>>>>> master
