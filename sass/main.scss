@@ -6,11 +6,66 @@
 @import "contact";
 @import "about";
 @import "work";
+
+/*------------------------main content*/
+
+noscript {
+    background: $red;
+    text-align: center;
+    color: white;
+    font-family: $text-face;
+    padding: 2.5em;
+    z-index: 1000;
+}
+
+
+/*------------------------typography*/
+
+h1 {
+    @include heading-1;
+}
+
+h2 {
+    @include heading-2;
+}
+
+h3 {
+    @include heading-3;
+}
+
+h4 {
+    @include heading-4;
+}
+
+h5 {
+    @include heading-5;
+}
+
+h6 {
+    @include heading-6;
+}
+
+p,
+span {
+    font-family: $text-face;
+    font-size: $text-size;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+}
+
+a,
+label,
+input[type=submit] {
+    font-family: $heading-face;
+    text-decoration: none;
+}
+
 html {
     height: 100%;
 }
 
 body {
+    font-family: $text-face;
     background: $red;
     min-height: 100%;
 }
