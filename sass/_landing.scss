@@ -7,7 +7,7 @@
     background: $yellow;
     width: 180vw;
     height: 20em;
-    margin-top: $gutter * 10;
+    margin-top: 12rem;
     @include transform(rotate(25deg));
     //query
     @include breakpoint(small) {
@@ -20,7 +20,7 @@
     }
     ;
     @include breakpoint(large) {
-        margin-top: $gutter * 14;
+        margin-top:15rem;
     }
     ;
 }
@@ -62,12 +62,14 @@
 /*flexboxcontainer for images*/
 
 .flex-hero {
+
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: space-around;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
     width: 100%;
-    height: 20%;
+    height: 40%;
+
 }
 
 
@@ -96,6 +98,83 @@
 
 ;
 //Images
+.figure {
+    display: flex;
+    align-items: space-around;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    opacity: 1;
+
+    height: 4em;
+    width: 4em;
+    margin: 0 0 1em 0;
+    border-radius: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background: $light-gray;
+    text-align: center;
+    //position:absolute;
+
+    @include transition(all 0.4s ease);
+    @include transform(rotate(-25deg));
+    left: 50%;
+    z-index: 10;
+    cursor: pointer;
+
+    @include breakpoint(small){
+
+    background: none;
+    //top: 35%;
+
+
+    };
+
+    &:first-child {
+        //left: 30%;
+    }
+    &:last-child {
+        //left: 70%;
+    }
+    //class that is set on click when figure is active.
+    &.is-active {
+        @include transform(translate(-50%,-50%) rotate(-25deg));
+
+        cursor: default;
+        height: 100%;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        z-index: 1000;
+        top: 50%;
+        left: 50%;
+        overflow: hidden;
+        position:absolute;
+
+        &:hover {
+            height: 100%;
+            width: 100%;
+        }
+        //Id for every persons profile-figure.
+        &#max {
+            background: url('../images/max2.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        &#joanna {
+            background: url('../images/joanna2.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        &#magnus {
+            background: url('../images/magnus2.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+/*
 .figure {
     display: flex;
     align-items: center;
@@ -167,14 +246,16 @@
             background-size: contain;
         }
     }
-}
+}*/
+
+
 
 //Hoverclass for profile-figure.
 .hover-figure {
   @include breakpoint(small){
     &:hover {
-              height: 8em;
-              width: 8em;
+              height: 7em;
+              width: 7em;
               background: $light-gray;
               color: black;
         }
@@ -233,9 +314,12 @@
     height: 2em;
     display: inherit;
     z-index: 111;
-    position: absolute;
+    /*
+  position: absolute;
     bottom: 14.5em;
-    left: 46%;
+    left: 46%;  */
+
+
     &.active {
         display: inline;
 
@@ -252,9 +336,12 @@
     display: none;
     z-index: 111;
     height: 2em;
-    position: absolute;
+    /*
+  position: absolute;
     bottom: 1em;
-    left: 47%;
+    left: 47%;  */
+
+
     @include transition(all 1s ease);
     opacity: 0;
     cursor: pointer;
@@ -278,11 +365,15 @@
     @include transition(all 0.4s ease);
     text-align: left;
     word-wrap: break-word;
-    position: absolute;
+    width: 80%;
+    /*
+  position: absolute;
     left: -24%;
-    top: 30%;
+    top: 30%;  */
+
+
     margin: 2em 8em 0 8em;
-    position: absolute;
+    //position: absolute;
     color: #fff;
     &.active {
         display: inline;
@@ -296,12 +387,15 @@
 }
 
 .profile-name {
-    left: -15%;
-    top: 0%;
+    /*
+  left: -15%;
+    top: 0%;  */
+
+
     display: none;
     font-size: 1.2em;
     text-align: left;
-    position: absolute;
+    //position: absolute;
     &.active {
         display: inline;
         opacity: 1;
@@ -337,10 +431,10 @@
     font-size: 3em;
     margin: 0;
     @include transform(rotate(25deg));
-    //color: #fff;
-    //@include transition(all 0.5s ease);
-    &:hover {}
-    &:first-child {}
+    @include breakpoint(xsmall){
+      font-size: 5em;
+    };
+
     &.active {
         //@include transition(all 0.5s ease);
         opacity: 0;
