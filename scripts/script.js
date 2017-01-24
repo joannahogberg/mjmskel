@@ -23,6 +23,7 @@ function navFunc() {
 
 /* Open when someone clicks on the menu icon element */
 function openNav() {
+    closeAll();
     document.getElementById("navBar").style.width = "100%";
     document.getElementById("menu").style.opacity = "0";
 }
