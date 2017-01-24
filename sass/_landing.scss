@@ -7,12 +7,12 @@
     background: $yellow;
     width: 180vw;
     height: 20em;
-    margin-top: $gutter * 8;
+    margin-top: $gutter * 10;
     @include transform(rotate(25deg));
     //query
     @include breakpoint(small) {
         margin-top: $gutter * 8;
-        height: 26rem;
+        height: 30rem;
     }
     ;
     @include breakpoint(medium) {
@@ -45,14 +45,14 @@
 
   @include breakpoint(xsmall){
 
-    height: 30rem;
-    width: 30rem;
+    height: 40rem;
+    width: 40rem;
 
   }
 
   @include breakpoint(xlarge){
-        height:30rem;
-        width: 30rem;
+        height:40rem;
+        width: 40rem;
     };
 
 
