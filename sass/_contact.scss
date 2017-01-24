@@ -23,6 +23,7 @@
 
 .content_container {
     @include flex-center;
+    flex-direction: column;
     position: absolute;
     left: 0;
     right: 0;
@@ -30,22 +31,28 @@
     max-width: 960px;
     height: 26rem;
     margin: 0 auto;
-}
-
-.contact-section-1 {
     @include breakpoint(small) {
-        height: 26rem;
+        flex-direction: row;
     }
 }
 
+// .contact-section-1 {
+//     @include breakpoint(small) {
+//         height: 26rem;
+//     }
+// }
 .container-circles {
-    margin-top: 12em;
-    margin-left: 1em;
-    height: 26rem;
+    display: flex;
+    flex-direction: row;
+    // margin-top: 12em;
+    // margin-left: 1em;
+    // height: 26rem;
     // ---------------------- Media queries
     @include breakpoint(small) {
-        margin-top: -5em;
-        @include transform(rotate(125deg));
+        flex-direction: column;
+        // width: 36rem;
+        // height: 26rem;
+        @include transform(rotate(25deg));
     }
 }
 
@@ -71,8 +78,9 @@
         @include transition(all 1s ease);
     }
     @include breakpoint(small) {
-        width: 7rem;
-        height: 7rem;
+        // width: 10em;
+        // height: 10em;
+        @include transform(rotate(25deg));
     }
 }
 

@@ -636,6 +636,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   position: absolute;
   left: 0;
   right: 0;
@@ -643,23 +644,21 @@
   max-width: 960px;
   height: 26rem;
   margin: 0 auto; }
-
-@media (min-width: 550px) {
-  .contact-section-1 {
-    height: 26rem; } }
+  @media (min-width: 550px) {
+    .content_container {
+      flex-direction: row; } }
 
 .container-circles {
-  margin-top: 12em;
-  margin-left: 1em;
-  height: 26rem; }
+  display: flex;
+  flex-direction: row; }
   @media (min-width: 550px) {
     .container-circles {
-      margin-top: -5em;
-      -webkit-transform: rotate(125deg);
-      -moz-transform: rotate(125deg);
-      -ms-transform: rotate(125deg);
-      -o-transform: rotate(125deg);
-      transform: rotate(125deg); } }
+      flex-direction: column;
+      -webkit-transform: rotate(25deg);
+      -moz-transform: rotate(25deg);
+      -ms-transform: rotate(25deg);
+      -o-transform: rotate(25deg);
+      transform: rotate(25deg); } }
 
 .contact_circle {
   position: relative;
@@ -693,8 +692,11 @@
     transition: all 1s ease; }
   @media (min-width: 550px) {
     .contact_circle {
-      width: 7rem;
-      height: 7rem; } }
+      -webkit-transform: rotate(25deg);
+      -moz-transform: rotate(25deg);
+      -ms-transform: rotate(25deg);
+      -o-transform: rotate(25deg);
+      transform: rotate(25deg); } }
 
 .info {
   width: 100%;
@@ -775,7 +777,94 @@
   -o-transform: rotate(-25deg);
   transform: rotate(-25deg); }
 
-<<<<<<< HEAD
+.contact-section-2 {
+  width: 80vw;
+  max-width: 1200px;
+  margin-top: 5em;
+  text-align: center;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  transform: rotate(10deg); }
+
+.form_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 960px;
+  height: 50%;
+  margin: 0 auto; }
+
+@-webkit-keyframes formMove {
+  from {
+    top: 0%; }
+  to {
+    top: 100%; } }
+@-moz-keyframes formMove {
+  from {
+    top: 0%; }
+  to {
+    top: 100%; } }
+@-ms-keyframes formMove {
+  from {
+    top: 0%; }
+  to {
+    top: 100%; } }
+@-o-keyframes formMove {
+  from {
+    top: 0%; }
+  to {
+    top: 100%; } }
+@keyframes formMove {
+  from {
+    top: 0%; }
+  to {
+    top: 100%; } }
+.form_circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #c2fcd9;
+  border-radius: 100%;
+  width: 100vw;
+  height: 100vw;
+  border: 0.5em solid #9EB2C0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-animation-name: formMove;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+  /* forward prevents the animation from restarting! */
+  -moz-animation-name: formMove;
+  -moz-animation-duration: 3s;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-name: formMove;
+  -ms-animation-duration: 3s;
+  -ms-animation-fill-mode: forwards;
+  -ms-animation-iteration-count: 1;
+  -o-animation-name: formMove;
+  -o-animation-duration: 3s;
+  -o-animation-fill-mode: forwards;
+  -o-animation-iteration-count: 1;
+  animation-name: formMove;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  z-index: 7; }
+  @media (min-width: 750px) {
+    .form_circle {
+      width: 60em;
+      height: 60em; } }
+
 @-webkit-keyframes fade {
   from {
     opacity: 0; }
@@ -1037,100 +1126,65 @@
     animation-iteration-count: 1;
     display: inline;
     opacity: 1; }
-=======
-.contact-section-2 {
-  width: 80vw;
-  max-width: 1200px;
-  margin-top: 5em;
-  text-align: center;
-  -webkit-transform: rotate(10deg);
-  -moz-transform: rotate(10deg);
-  -ms-transform: rotate(10deg);
-  -o-transform: rotate(10deg);
-  transform: rotate(10deg); }
 
-.form_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  max-width: 960px;
-  height: 50%;
-  margin: 0 auto; }
-
-@-webkit-keyframes formMove {
-  from {
-    top: 0%; }
-  to {
-    top: 100%; } }
-@-moz-keyframes formMove {
-  from {
-    top: 0%; }
-  to {
-    top: 100%; } }
-@-ms-keyframes formMove {
-  from {
-    top: 0%; }
-  to {
-    top: 100%; } }
-@-o-keyframes formMove {
-  from {
-    top: 0%; }
-  to {
-    top: 100%; } }
-@keyframes formMove {
-  from {
-    top: 0%; }
-  to {
-    top: 100%; } }
-.form_circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/*------------------------main content*/
+noscript {
+  background: #fa7f7f;
   text-align: center;
-  background: #c2fcd9;
-  border-radius: 100%;
-  width: 100vw;
-  height: 100vw;
-  border: 0.5em solid #9EB2C0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  -webkit-animation-name: formMove;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
-  /* forward prevents the animation from restarting! */
-  -moz-animation-name: formMove;
-  -moz-animation-duration: 3s;
-  -moz-animation-fill-mode: forwards;
-  -moz-animation-iteration-count: 1;
-  -ms-animation-name: formMove;
-  -ms-animation-duration: 3s;
-  -ms-animation-fill-mode: forwards;
-  -ms-animation-iteration-count: 1;
-  -o-animation-name: formMove;
-  -o-animation-duration: 3s;
-  -o-animation-fill-mode: forwards;
-  -o-animation-iteration-count: 1;
-  animation-name: formMove;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  z-index: 7; }
-  @media (min-width: 750px) {
-    .form_circle {
-      width: 60em;
-      height: 60em; } }
->>>>>>> master
+  color: white;
+  font-family: "Playfair Display", serif;
+  padding: 2.5em;
+  z-index: 1000; }
+
+/*------------------------typography*/
+h1 {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-size: 3em; }
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-size: 2.5em; }
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-size: 2em; }
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-size: 1.5em; }
+
+h5 {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-size: 1.2em; }
+
+h6 {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-size: 0.5em; }
+
+p,
+span {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.05em; }
+
+a,
+label,
+input[type=submit] {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none; }
 
 html {
   height: 100%; }
 
 body {
+  font-family: "Playfair Display", serif;
   background: #fa7f7f;
   min-height: 100%; }
 
