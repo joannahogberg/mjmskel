@@ -69,8 +69,8 @@
         @include transition(all 1s ease);
     }
     @include breakpoint(small) {
-        width: 11rem;
-        height: 11rem;
+        // width: 11rem;
+        // height: 11rem;
         @include transform(rotate(25deg));
     }
 }

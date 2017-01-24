@@ -694,8 +694,6 @@
     transition: all 1s ease; }
   @media (min-width: 550px) {
     .contact_circle {
-      width: 11rem;
-      height: 11rem;
       -webkit-transform: rotate(25deg);
       -moz-transform: rotate(25deg);
       -ms-transform: rotate(25deg);
