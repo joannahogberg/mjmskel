@@ -1,17 +1,18 @@
 /*--------Landingpage-hero--------------*/
 
 .landing-box {
+  padding:0;
     @include flex-center;
     flex-direction: row;
     background: $yellow;
     width: 180vw;
     height: 20em;
-    margin-top: $gutter * 8;
+    margin-top: $gutter * 10;
     @include transform(rotate(25deg));
     //query
     @include breakpoint(small) {
         margin-top: $gutter * 8;
-        height: 26rem;
+        height: 30rem;
     }
     ;
     @include breakpoint(medium) {
@@ -30,23 +31,22 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 100%;
-  /*
-height:20em;
-  width:20em;  */
   width: 110vw;
   height: 110vw;
   position: relative;
-  border: 1rem solid $light-gray;
+  border: 1em solid $light-gray;
   background: $red;
   background-size: 100%;
   overflow: hidden;
   word-wrap: break-word;
+
+
   @include transition(all 100s ease);
 
   @include breakpoint(xsmall){
 
-    height: 30em;
-    width: 30em;
+    height: 40rem;
+    width: 40rem;
 
   }
 
@@ -113,19 +113,21 @@ height:20em;
     background: $light-gray;
     text-align: center;
     position: absolute;
-    /*
-  -webkit-perspective: 1000;
-    perspective: 1000;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;  */
 
-
-    //@include animation(figurelight, 2s, none , infinite);
     @include transition(all 0.5s ease);
     @include transform(translate(-50%, -50%) rotate(-25deg));
     left: 50%;
     z-index: 10;
     cursor: pointer;
+
+    @include breakpoint(small){
+
+    background: none;
+    top: 35%;
+
+
+    };
+
     &:first-child {
         left: 30%;
     }
@@ -168,7 +170,16 @@ height:20em;
 }
 
 //Hoverclass for profile-figure.
-.hover-figure {}
+.hover-figure {
+  @include breakpoint(small){
+    &:hover {
+              height: 8em;
+              width: 8em;
+              background: $light-gray;
+              color: black;
+        }
+  };
+}
 
 .filter {
     display: none;
