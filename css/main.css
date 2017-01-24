@@ -7,6 +7,7 @@
 /* MIXINS FOR HIDE & SHOW */
 /*--------Landingpage-hero--------------*/
 .landing-box {
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,13 +35,10 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 100%;
-  /*
-height:20em;
-  width:20em;  */
   width: 110vw;
   height: 110vw;
   position: relative;
-  border: 1rem solid #CCD7E4;
+  border: 1em solid #CCD7E4;
   background: #fa7f7f;
   background-size: 100%;
   overflow: hidden;
@@ -52,12 +50,12 @@ height:20em;
   transition: all 100s ease; }
   @media (min-width: 400px) {
     .container-hero {
-      height: 30em;
-      width: 30em; } }
+      height: 30rem;
+      width: 30rem; } }
   @media (min-width: 1200px) {
     .container-hero {
-      height: 40rem;
-      width: 40rem; } }
+      height: 30rem;
+      width: 30rem; } }
 
 /*flexboxcontainer for images*/
 .flex-hero {
@@ -186,11 +184,6 @@ height:20em;
   background: #CCD7E4;
   text-align: center;
   position: absolute;
-  /*
--webkit-perspective: 1000;
-  perspective: 1000;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;  */
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -204,6 +197,10 @@ height:20em;
   left: 50%;
   z-index: 10;
   cursor: pointer; }
+  @media (min-width: 550px) {
+    .figure {
+      background: none;
+      top: 35%; } }
   .figure:first-child {
     left: 30%; }
   .figure:last-child {
@@ -238,6 +235,13 @@ height:20em;
       background: url("../images/magnus2.jpg");
       background-repeat: no-repeat;
       background-size: contain; }
+
+@media (min-width: 550px) {
+  .hover-figure:hover {
+    height: 8em;
+    width: 8em;
+    background: #CCD7E4;
+    color: black; } }
 
 .filter {
   display: none; }
