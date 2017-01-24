@@ -775,7 +775,94 @@
   -o-transform: rotate(-25deg);
   transform: rotate(-25deg); }
 
-<<<<<<< HEAD
+.contact-section-2 {
+  width: 80vw;
+  max-width: 1200px;
+  margin-top: 5em;
+  text-align: center;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  transform: rotate(10deg); }
+
+.form_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 960px;
+  height: 50%;
+  margin: 0 auto; }
+
+@-webkit-keyframes formMove {
+  from {
+    top: 0%; }
+  to {
+    top: 100%; } }
+@-moz-keyframes formMove {
+  from {
+    top: 0%; }
+  to {
+    top: 100%; } }
+@-ms-keyframes formMove {
+  from {
+    top: 0%; }
+  to {
+    top: 100%; } }
+@-o-keyframes formMove {
+  from {
+    top: 0%; }
+  to {
+    top: 100%; } }
+@keyframes formMove {
+  from {
+    top: 0%; }
+  to {
+    top: 100%; } }
+.form_circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #c2fcd9;
+  border-radius: 100%;
+  width: 100vw;
+  height: 100vw;
+  border: 0.5em solid #9EB2C0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-animation-name: formMove;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+  /* forward prevents the animation from restarting! */
+  -moz-animation-name: formMove;
+  -moz-animation-duration: 3s;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-name: formMove;
+  -ms-animation-duration: 3s;
+  -ms-animation-fill-mode: forwards;
+  -ms-animation-iteration-count: 1;
+  -o-animation-name: formMove;
+  -o-animation-duration: 3s;
+  -o-animation-fill-mode: forwards;
+  -o-animation-iteration-count: 1;
+  animation-name: formMove;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  z-index: 7; }
+  @media (min-width: 750px) {
+    .form_circle {
+      width: 60em;
+      height: 60em; } }
+
 @-webkit-keyframes fade {
   from {
     opacity: 0; }
@@ -976,6 +1063,7 @@
 
 .about-p {
   padding: 1rem;
+  font-family: "Playfair Display", serif;
   /*
   margin: 0 $gutter $gutter $gutter;
   display: inherit;
@@ -995,6 +1083,7 @@
   };  */ }
 
 .about-img {
+  margin-bottom: 2em;
   /*
   width: 80vw;
 //queries
@@ -1037,95 +1126,6 @@
     animation-iteration-count: 1;
     display: inline;
     opacity: 1; }
-=======
-.contact-section-2 {
-  width: 80vw;
-  max-width: 1200px;
-  margin-top: 5em;
-  text-align: center;
-  -webkit-transform: rotate(10deg);
-  -moz-transform: rotate(10deg);
-  -ms-transform: rotate(10deg);
-  -o-transform: rotate(10deg);
-  transform: rotate(10deg); }
-
-.form_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  max-width: 960px;
-  height: 50%;
-  margin: 0 auto; }
-
-@-webkit-keyframes formMove {
-  from {
-    top: 0%; }
-  to {
-    top: 100%; } }
-@-moz-keyframes formMove {
-  from {
-    top: 0%; }
-  to {
-    top: 100%; } }
-@-ms-keyframes formMove {
-  from {
-    top: 0%; }
-  to {
-    top: 100%; } }
-@-o-keyframes formMove {
-  from {
-    top: 0%; }
-  to {
-    top: 100%; } }
-@keyframes formMove {
-  from {
-    top: 0%; }
-  to {
-    top: 100%; } }
-.form_circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: #c2fcd9;
-  border-radius: 100%;
-  width: 100vw;
-  height: 100vw;
-  border: 0.5em solid #9EB2C0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  -webkit-animation-name: formMove;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
-  /* forward prevents the animation from restarting! */
-  -moz-animation-name: formMove;
-  -moz-animation-duration: 3s;
-  -moz-animation-fill-mode: forwards;
-  -moz-animation-iteration-count: 1;
-  -ms-animation-name: formMove;
-  -ms-animation-duration: 3s;
-  -ms-animation-fill-mode: forwards;
-  -ms-animation-iteration-count: 1;
-  -o-animation-name: formMove;
-  -o-animation-duration: 3s;
-  -o-animation-fill-mode: forwards;
-  -o-animation-iteration-count: 1;
-  animation-name: formMove;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  z-index: 7; }
-  @media (min-width: 750px) {
-    .form_circle {
-      width: 60em;
-      height: 60em; } }
->>>>>>> master
 
 html {
   height: 100%; }
