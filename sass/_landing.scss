@@ -399,11 +399,8 @@
 }
 
 .profile-name {
-
     left: -10%;
     top: 0%;
-
-
     display: none;
     font-size: 1.2em;
     text-align: left;
@@ -419,6 +416,10 @@
     }
     @include breakpoint(xsmall){
       left: -5%;
+      top:5%;
+    };
+    @include breakpoint(small){
+      left: -3%;
       top:5%;
     };
 }

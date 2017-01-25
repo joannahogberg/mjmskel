@@ -73,7 +73,7 @@
   @include transition(all 1s ease);
   @include heading-2;
   //top:1em;
-  margin: 0 2em 4em 0;
+  margin: 0 2em 1em 0;
 
   cursor: pointer;
   //position:absolute;
@@ -123,45 +123,10 @@
 .about-p {
   padding:1rem;
   font-family:$text-face;
-  /*
-  margin: 0 $gutter $gutter $gutter;
-  display: inherit;
-  opacity: inherit;
-  //width:80vw;
-  @include transition(all 1s ease);
-  @include breakpoint(small){
-    max-width: 425px;
-  };
-  @include breakpoint(medium){
-    max-width: 580px;
-  };
-  @include breakpoint(large){
-    width: 780px;
-    //margin:-1em $gutter * 4 1em $gutter *4;
-
-  };  */
-  &.columns {
-
-  }
-
 }
 
 .about-img {
   margin-bottom: 2em;
-  /*
-  width: 80vw;
-//queries
-  @include breakpoint(small){
-    max-width: 425px;
-  };
-  @include breakpoint(medium){
-    max-width: 580px;
-  };
-  @include breakpoint(large){
-    width:40em;
-  };  */
-
-
 }
 .arrow-about {
   cursor: pointer;
