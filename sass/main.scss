@@ -7,7 +7,7 @@
 @import "about";
 @import "work";
 
-/*------------------------main content*/
+/*------------------------ Styled div for noscript tag*/
 
 noscript {
     background: $red;
@@ -19,7 +19,7 @@ noscript {
 }
 
 
-/*------------------------typography*/
+/*------------------------ Typography*/
 
 h1 {
     @include heading-1;
@@ -60,13 +60,16 @@ input[type=submit] {
     text-decoration: none;
 }
 
+
+/*------------------------ Main content*/
+
 html {
     height: 100%;
 }
 
 body {
     font-family: $text-face;
-    background: $red;
+    background: $dark-gray;
     min-height: 100%;
 }
 
@@ -77,12 +80,10 @@ body {
     align-items: center;
     background: $dark-gray;
     height: auto;
-    table-layout: fixed;
     min-height: 100vh;
-    width: 100%;
-    max-width: 1200px;
     overflow-x: hidden;
     table-layout: fixed;
+    width: 100%;
     max-width: 2560px;
     margin: 0 auto;
 }
@@ -97,17 +98,8 @@ body {
     text-align: center;
 }
 
-.logo {
-    height: 100%;
-    width: 4em;
-    &:hover {
-        @include transform(scale(1.2));
-    }
-    // ---------------------- Media queries
-    @include breakpoint(small) {
-        width: 5em;
-    }
-}
+
+/*------------------------ Fixed header */
 
 header {
     display: flex;
@@ -118,11 +110,12 @@ header {
     right: 0;
 }
 
+
+/*------------------------ Fixed header */
+
 .header {
     display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
     align-items: center;
     width: 80%;
     max-width: 1200px;
@@ -133,4 +126,3 @@ header {
         width: 100%;
     }
 }
-

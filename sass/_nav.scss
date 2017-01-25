@@ -1,14 +1,12 @@
-    /*------------------------navigation*/
-    /* Mobile Navigation */
+    /*------------------------ Navigation*/
+    /*------------------------ Hamburger icon*/
     
     #menu {
         height: 6em;
         width: 4.5em;
         position: fixed;
-        // top: -0.3em;
         top: 0.5em;
         right: $main-margin;
-        /* z-index 11 to alwaus stay on top*/
         z-index: 1111;
         cursor: pointer;
         // ---------------------- Media queries
@@ -21,6 +19,20 @@
             visibility: hidden;
         }
     }
+    /*----------------------- MJM  logo*/
+    
+    .logo {
+        height: 100%;
+        width: 4em;
+        &:hover {
+            @include transform(scale(1.2));
+        }
+        // ---------------------- Media queries
+        @include breakpoint(small) {
+            width: 5em;
+        }
+    }
+    /*------------------------ Mobile Navigation that shows as a full-screen overlay */
     
     .overlay {
         height: 100%;
@@ -47,7 +59,6 @@
     
     .overlay a {
         padding: $gutter /2;
-        text-decoration: none;
         color: white;
         font-size: 2.5rem;
         line-height: 1.5;
@@ -64,6 +75,7 @@
         height: 1.5em;
         margin: 1em;
     }
+    /*------------------------ Primary navigation in header */
     
     .header_nav {
         visibility: hidden;
@@ -74,23 +86,6 @@
         // ---------------------- Media queries
         @include breakpoint(medium) {
             visibility: visible;
-        }
-    }
-    
-    @include keyframe (head-fade) {
-        from {
-            opacity: 0.5;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-    
-    .nav_background {
-        @include breakpoint(small) {
-            width: 100%;
-            background: $dark-gray;
-            @include animation(head-fade, 2s, forwards, 1);
         }
     }
     
@@ -108,4 +103,22 @@
     .header_nav a:hover,
     .header_nav a:focus {
         color: white;
+    }
+    /*------------------------ Animation for background when page is scrolled */
+    
+    @include keyframe (head-fade) {
+        from {
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .nav_background {
+        @include breakpoint(medium) {
+            width: 100%;
+            background: $dark-gray;
+            @include animation(head-fade, 2s, forwards, 1);
+        }
     }

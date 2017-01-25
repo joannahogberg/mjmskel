@@ -1,3 +1,6 @@
+/*--------------------- Contact page */
+
+//--------------------- Background divs */
 .yellow_topbox {
     background: $yellow;
     position: relative;
@@ -5,9 +8,12 @@
     width: 180vw;
     height: 40rem;
     margin: 0 auto;
-    margin-top: 7em;
+    margin-top: 6rem;
     z-index: 2;
     @include transform(rotate(25deg));
+    @include breakpoint(small) {
+        margin-top: 10rem;
+    }
     @include breakpoint(medium) {
         height: 50rem;
     }
@@ -27,6 +33,25 @@
     }
 }
 
+.background-box-mediumgray {
+    width: 100vw;
+    height: 40rem;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    z-index: 1;
+    background: $medium-gray;
+    display: none;
+    // ---------------------- Media queries
+    @include breakpoint(small) {
+        display: block;
+    }
+    @include breakpoint(xlarge) {
+        height: 50rem;
+    }
+}
+
+//--------------------- Container for content */
 .content_container {
     @include flex-center;
     flex-direction: column;
@@ -45,11 +70,20 @@
     }
 }
 
+//--------------------- Content in yellow div */
 .contact-hero {
     word-wrap: break-word;
     text-align: center;
     color: $dark-gray;
+    margin-right: 3.5rem;
+    @include transform(rotate(-25deg));
     // ---------------------- Media queries
+    @include breakpoint(xsmall) {
+        margin: $main-margin*2;
+    }
+    @include breakpoint(small) {
+        margin: 0;
+    }
     @include breakpoint(medium) {
         width: 50rem;
         &:first-child {
@@ -58,12 +92,12 @@
     }
 }
 
+//--------------------- Container for icon circles in yellow div */
 .container-circles {
     display: flex;
     flex-direction: row;
     // ---------------------- Media queries
     @include breakpoint(small) {
-        // height: 100%;
         @include transform(rotate(-50deg));
     }
 }
@@ -76,6 +110,7 @@
     margin: 0 auto;
     width: 10rem;
     height: 10rem;
+    margin-right: -3.5rem;
     border: 0.5em solid $dark-gray;
     @include transform(rotate(-25deg));
     &:first-child {
@@ -87,7 +122,7 @@
     &:hover {
         z-index: 30;
         cursor: pointer;
-        @include transform(scale(1.7));
+        @include transform(scale(1.8));
         @include transition(all 1s ease);
     }
     @include breakpoint(small) {
@@ -95,9 +130,15 @@
     }
 }
 
+
+/*--------------------- Icons in small circels*/
+
 .info_icon {
     width: 65%;
 }
+
+
+/*--------------------- Settings to have have icon-circles flipped on hover */
 
 .front,
 .back {
@@ -136,10 +177,7 @@
     }
 }
 
-.contact-hero {
-    @include transform(rotate(-25deg));
-}
-
+//--------------------- Content in red div */
 .contact-section-2 {
     max-width: 700px;
     text-align: center;
@@ -152,6 +190,15 @@
     }
 }
 
+.darkgray {
+    font-size: $text-size *1.2;
+    // ---------------------- Media queries
+    @include breakpoint(medium) {
+        font-size: $text-size *1.5;
+    }
+}
+
+//--------------------- Contact form */
 @include keyframe(formMove) {
     from {
         top: 0%;
@@ -167,8 +214,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    width: 100%;
-    max-width: 700px;
+    max-width: 1200px;
     height: 50%;
     margin: 0 auto;
     @include animation(formMove, 3s, forwards, 1);
@@ -181,17 +227,34 @@
     background: $light-green;
     color: $dark-gray;
     border-radius: 100%;
-    width: 100vw;
-    height: 100vw;
+    width: 98vw;
+    height: 98vw;
     border: 0.5em solid $medium-gray;
     position: absolute;
     // Place it centered
     left: 0;
     right: 0;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 7;
     @include breakpoint(medium) {
-        width: 48em;
-        height: 48em;
+        width: 60em;
+        height: 60em;
+    }
+}
+
+.hero-form {
+    word-wrap: break-word;
+    margin: 0;
+    margin-bottom: $gutter / 2;
+    text-align: center;
+    color: $dark-gray;
+    // ---------------------- Media queries
+    @include breakpoint(small) {
+        margin-bottom: $gutter*2;
+    }
+    @include breakpoint(medium) {
+        @include heading-2;
     }
 }
 
