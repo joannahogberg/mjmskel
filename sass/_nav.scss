@@ -1,0 +1,93 @@
+    /*------------------------navigation*/
+    /* Mobile Navigation */
+    
+    #menu {
+        height: 5.5em;
+        width: 4em;
+        position: fixed;
+        // top: -0.3em;
+        top: 0.5em;
+        right: $main-margin;
+        /* z-index 11 to alwaus stay on top*/
+        z-index: 1111;
+        cursor: pointer;
+        // ---------------------- Media queries
+        @include breakpoint(small) {
+            height: 6em;
+            width: 4.5em;
+            top: -0.5em;
+            visibility: hidden;
+        }
+    }
+    
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        top: $main-margin;
+        background: $red;
+        overflow-x: hidden;
+        padding-top: 2em;
+        @include transform(skew(-15deg));
+        @include transition(0.5s);
+        display: flex;
+        justify-content: center;
+    }
+    
+    .overlay-content {
+        @include flex-center;
+        flex-direction: column;
+        margin-top: 2em;
+        @include transform(skew(15deg));
+    }
+    
+    .overlay a {
+        padding: $gutter /2;
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+        line-height: 1.5;
+        transition: 0.5s;
+        // ---------------------- Media queries
+        @include breakpoint(medium) {
+            font-size: 2em;
+        }
+    }
+    
+    .overlay a:hover,
+    .overlay a:focus {
+        color: $light-gray;
+    }
+    
+    .arrow-nav {
+        cursor: pointer;
+        height: 1.5em;
+        margin: 1em;
+    }
+    
+    .header_nav {
+        visibility: hidden;
+        // ---------------------- Media queries
+        @include breakpoint(small) {
+            visibility: visible;
+        }
+    }
+    
+    @include keyframe (head-fade) {
+        from {
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .nav_background {
+        @include breakpoint(small) {
+            width: 100%;
+            background: $dark-gray;
+            @include animation(head-fade, 2s, forwards, 1);
+        }
+    }

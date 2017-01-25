@@ -1,0 +1,245 @@
+.yellow_topbox {
+    background: $yellow;
+    position: relative;
+    left: -40vw;
+    width: 180vw;
+    height: 40rem;
+    margin: 0 auto;
+    margin-top: 5em;
+    z-index: 2;
+    @include transform(rotate(25deg));
+    @include breakpoint(medium) {
+        height: 50rem;
+    }
+}
+
+.red_midbox {
+    background: $red;
+    color: white;
+    width: 180vw;
+    height: 40rem;
+    margin-top: 5rem;
+    z-index: 1;
+    @include transform(rotate(-10deg));
+    // ---------------------- Media queries
+    @include breakpoint(medium) {
+        height: 50rem;
+    }
+}
+
+.content_container {
+    @include flex-center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 50%;
+    max-width: 700px;
+    height: 40rem;
+    margin: 0 auto;
+    @include breakpoint(small) {
+        flex-direction: row;
+    }
+    @include breakpoint(medium) {
+        height: 50rem;
+    }
+}
+
+.contact-hero {
+    word-wrap: break-word;
+    text-align: center;
+    color: $dark-gray;
+    // ---------------------- Media queries
+    @include breakpoint(medium) {
+        width: 50rem;
+        &:first-child {
+            @include heading-1;
+        }
+    }
+}
+
+.container-circles {
+    display: flex;
+    flex-direction: row;
+    // ---------------------- Media queries
+    @include breakpoint(small) {
+        // height: 100%;
+        @include transform(rotate(-50deg));
+    }
+}
+
+.contact_circle {
+    @include flex-center;
+    position: relative;
+    background: $red;
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 10rem;
+    height: 10rem;
+    border: 0.5em solid $dark-gray;
+    @include transform(rotate(-25deg));
+    &:first-child {
+        background: $light-gray;
+    }
+    &:last-child {
+        background: $medium-green;
+    }
+    &:hover {
+        z-index: 30;
+        cursor: pointer;
+        @include transform(scale(1.7));
+        @include transition(all 1s ease);
+    }
+    @include breakpoint(small) {
+        @include transform(rotate(25deg));
+    }
+}
+
+.info_icon {
+    width: 65%;
+}
+
+.front,
+.back {
+    @include flex-center;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    @include transform-style(preserve-3d);
+    @include transition(all 1.0s linear);
+}
+
+.contact_circle:hover .info {
+    @include transform(rotateY(180deg));
+    @include backface-visibility(hidden);
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include backface-visibility(hidden);
+}
+
+.face.back {
+    @include transform(rotateY(180deg));
+    text-align: center;
+}
+
+.contact-text {
+    font-size: 0.5rem;
+    @include transform(rotate(-25deg));
+    @include breakpoint(small) {
+        @include transform(rotate(25deg));
+    }
+}
+
+.contact-hero {
+    @include transform(rotate(-25deg));
+}
+
+.contact-section-2 {
+    max-width: 700px;
+    text-align: center;
+    @include transform(rotate(10deg));
+    // ---------------------- Media queries
+    @include breakpoint(medium) {
+        &:first-child {
+            @include heading-4;
+        }
+    }
+}
+
+@include keyframe(formMove) {
+    from {
+        top: 0%;
+    }
+    to {
+        top: 100%;
+    }
+}
+
+.form_container {
+    @include flex-center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 700px;
+    height: 50%;
+    margin: 0 auto;
+    @include animation(formMove, 3s, forwards, 1);
+}
+
+.form_circle {
+    @include flex-center;
+    text-align: center;
+    flex-direction: column;
+    background: $light-green;
+    color: $dark-gray;
+    border-radius: 100%;
+    width: 100vw;
+    height: 100vw;
+    border: 0.5em solid $medium-gray;
+    position: absolute;
+    // Place it centered
+    left: 0;
+    right: 0;
+    z-index: 7;
+    @include breakpoint(medium) {
+        width: 48em;
+        height: 48em;
+    }
+}
+
+.contactform {
+    display: flex;
+    flex-direction: column;
+    color: $dark-gray;
+    width: 70%;
+    @include breakpoint(medium) {
+        width: 60%;
+    }
+}
+
+.form-label {
+    display: none;
+    // ---------------------- Media queries
+    @include breakpoint(medium) {
+        display: block;
+        text-align: left;
+        color: $medium-gray;
+        padding-bottom: 0.2rem;
+    }
+}
+
+.form-button {
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 20rem;
+    background: $dark-gray;
+    color: $light-green;
+    margin: 0 auto;
+    border: 0.2em solid $dark-gray;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: -4em;
+}
+
+.form-button h4 {
+    font-weight: 400;
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+}
+
+.form-button:hover {
+    background: $light-green;
+    color: $dark-gray;
+    border: 0.2em solid $light-gray;
+}
