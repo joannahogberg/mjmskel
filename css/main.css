@@ -57,7 +57,6 @@
       height: 40rem;
       width: 40rem; } }
 
-/*flexboxcontainer for images*/
 .flex-hero {
   display: flex;
   justify-content: center;
@@ -66,7 +65,6 @@
   width: 100%;
   height: 25%; }
 
-/*Elements with images and text about the employee*/
 @-webkit-keyframes figure-start {
   from {
     -webkit-transform: translate(0, 0);
@@ -167,84 +165,6 @@
     background: #CCD7E4; }
   100% {
     background: transparent; } }
-/*
-//Images
-.figure {
-    display: flex;
-    align-items: space-around;
-    justify-content: center;
-    flex-direction: column;
-    color: #fff;
-    opacity: 1;
-
-    height: 4em;
-    width: 4em;
-    margin: 0 0 1em 0;
-    border-radius: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background: $light-gray;
-    text-align: center;
-    //position:absolute;
-
-    @include transition(all 0.4s ease);
-    @include transform(rotate(-25deg));
-    left: 50%;
-    z-index: 10;
-    cursor: pointer;
-
-    @include breakpoint(small){
-
-    background: none;
-    //top: 35%;
-
-
-    };
-
-    &:first-child {
-        //left: 30%;
-    }
-    &:last-child {
-        //left: 70%;
-    }
-    //class that is set on click when figure is active.
-    &.is-active {
-        @include transform(translate(-50%,-50%) rotate(-25deg));
-
-        cursor: default;
-        height: 100%;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        z-index: 1000;
-        top: 50%;
-        left: 50%;
-        overflow: hidden;
-        position:absolute;
-
-        &:hover {
-            height: 100%;
-            width: 100%;
-        }
-        //Id for every persons profile-figure.
-        &#max {
-            background: url('../images/max2.jpg');
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-        &#joanna {
-            background: url('../images/joanna2.jpg');
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-        &#magnus {
-            background: url('../images/magnus2.jpg');
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-    }
-}*/
 .figure {
   display: flex;
   align-items: center;
@@ -1132,19 +1052,7 @@
     -moz-transform: translate(0, 10%);
     -ms-transform: translate(0, 10%);
     -o-transform: translate(0, 10%);
-    transform: translate(0, 10%);
-    /*
-
-    @include breakpoint(xsmall){
-          height: 66em;
-    };
-    @include breakpoint(small){
-      height:68em;
-    };
-
-    @include breakpoint(medium){
-      height:74em;
-    };*/ }
+    transform: translate(0, 10%); }
   @media (min-width: 550px) {
     .about-box {
       -webkit-transform: rotate(25deg) translate(-45%);
@@ -1227,11 +1135,6 @@
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     opacity: 1;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
