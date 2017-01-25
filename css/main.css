@@ -500,15 +500,14 @@
   .hero-h1.active {
     opacity: 0; }
 
-/*------------------------navigation*/
-/* Mobile Navigation */
+/*------------------------ Navigation*/
+/*------------------------ Hamburger icon*/
 #menu {
   height: 6em;
   width: 4.5em;
   position: fixed;
   top: 0.5em;
   right: 24px;
-  /* z-index 11 to alwaus stay on top*/
   z-index: 1111;
   cursor: pointer; }
   @media (min-width: 550px) {
@@ -520,6 +519,21 @@
     #menu {
       visibility: hidden; } }
 
+/*----------------------- MJM  logo*/
+.logo {
+  height: 100%;
+  width: 4em; }
+  .logo:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+  @media (min-width: 550px) {
+    .logo {
+      width: 5em; } }
+
+/*------------------------ Mobile Navigation that shows as a full-screen overlay */
 .overlay {
   height: 100%;
   width: 0;
@@ -557,7 +571,6 @@
 
 .overlay a {
   padding: 8px;
-  text-decoration: none;
   color: white;
   font-size: 2.5rem;
   line-height: 1.5;
@@ -572,6 +585,7 @@
   height: 1.5em;
   margin: 1em; }
 
+/*------------------------ Primary navigation in header */
 .header_nav {
   visibility: hidden;
   display: flex;
@@ -582,6 +596,19 @@
     .header_nav {
       visibility: visible; } }
 
+.nav_link {
+  margin-right: 48px; }
+  .nav_link:last-child {
+    margin-right: 24px; }
+
+.header_nav a {
+  color: #c2fcd9; }
+
+.header_nav a:hover,
+.header_nav a:focus {
+  color: white; }
+
+/*------------------------ Animation for background when page is scrolled */
 @-webkit-keyframes head-fade {
   from {
     opacity: 0.5; }
@@ -607,7 +634,7 @@
     opacity: 0.5; }
   to {
     opacity: 1; } }
-@media (min-width: 550px) {
+@media (min-width: 750px) {
   .nav_background {
     width: 100%;
     background: #2E3641;
@@ -633,18 +660,7 @@
     animation-fill-mode: forwards;
     animation-iteration-count: 1; } }
 
-.nav_link {
-  margin-right: 48px; }
-  .nav_link:last-child {
-    margin-right: 24px; }
-
-.header_nav a {
-  color: #c2fcd9; }
-
-.header_nav a:hover,
-.header_nav a:focus {
-  color: white; }
-
+/*--------------------- Contact page */
 .yellow_topbox {
   background: #f8fba2;
   position: relative;
@@ -652,13 +668,16 @@
   width: 180vw;
   height: 40rem;
   margin: 0 auto;
-  margin-top: 7em;
+  margin-top: 6rem;
   z-index: 2;
   -webkit-transform: rotate(25deg);
   -moz-transform: rotate(25deg);
   -ms-transform: rotate(25deg);
   -o-transform: rotate(25deg);
   transform: rotate(25deg); }
+  @media (min-width: 550px) {
+    .yellow_topbox {
+      margin-top: 10rem; } }
   @media (min-width: 750px) {
     .yellow_topbox {
       height: 50rem; } }
@@ -677,6 +696,22 @@
   transform: rotate(-10deg); }
   @media (min-width: 750px) {
     .red_midbox {
+      height: 50rem; } }
+
+.background-box-mediumgray {
+  width: 100vw;
+  height: 40rem;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  z-index: 1;
+  background: #9EB2C0;
+  display: none; }
+  @media (min-width: 550px) {
+    .background-box-mediumgray {
+      display: block; } }
+  @media (min-width: 1200px) {
+    .background-box-mediumgray {
       height: 50rem; } }
 
 .content_container {
@@ -701,7 +736,19 @@
 .contact-hero {
   word-wrap: break-word;
   text-align: center;
-  color: #2E3641; }
+  color: #2E3641;
+  margin-right: 3.5rem;
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg); }
+  @media (min-width: 400px) {
+    .contact-hero {
+      margin: 48px; } }
+  @media (min-width: 550px) {
+    .contact-hero {
+      margin: 0; } }
   @media (min-width: 750px) {
     .contact-hero {
       width: 50rem; }
@@ -732,6 +779,7 @@
   margin: 0 auto;
   width: 10rem;
   height: 10rem;
+  margin-right: -3.5rem;
   border: 0.5em solid #2E3641;
   -webkit-transform: rotate(-25deg);
   -moz-transform: rotate(-25deg);
@@ -745,11 +793,11 @@
   .contact_circle:hover {
     z-index: 30;
     cursor: pointer;
-    -webkit-transform: scale(1.7);
-    -moz-transform: scale(1.7);
-    -ms-transform: scale(1.7);
-    -o-transform: scale(1.7);
-    transform: scale(1.7);
+    -webkit-transform: scale(1.8);
+    -moz-transform: scale(1.8);
+    -ms-transform: scale(1.8);
+    -o-transform: scale(1.8);
+    transform: scale(1.8);
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
@@ -763,9 +811,11 @@
       -o-transform: rotate(25deg);
       transform: rotate(25deg); } }
 
+/*--------------------- Icons in small circels*/
 .info_icon {
   width: 65%; }
 
+/*--------------------- Settings to have have icon-circles flipped on hover */
 .front,
 .back {
   display: flex;
@@ -831,13 +881,6 @@
       -o-transform: rotate(25deg);
       transform: rotate(25deg); } }
 
-.contact-hero {
-  -webkit-transform: rotate(-25deg);
-  -moz-transform: rotate(-25deg);
-  -ms-transform: rotate(-25deg);
-  -o-transform: rotate(-25deg);
-  transform: rotate(-25deg); }
-
 .contact-section-2 {
   max-width: 700px;
   text-align: center;
@@ -852,6 +895,12 @@
       line-height: 1.5;
       font-weight: 700;
       font-size: 1.5em; } }
+
+.darkgray {
+  font-size: 19.2px; }
+  @media (min-width: 750px) {
+    .darkgray {
+      font-size: 24px; } }
 
 @-webkit-keyframes formMove {
   from {
@@ -886,8 +935,7 @@
   top: 100%;
   left: 0;
   right: 0;
-  width: 100%;
-  max-width: 700px;
+  max-width: 1200px;
   height: 50%;
   margin: 0 auto;
   -webkit-animation-name: formMove;
@@ -921,17 +969,35 @@
   background: #c2fcd9;
   color: #2E3641;
   border-radius: 100%;
-  width: 100vw;
-  height: 100vw;
+  width: 98vw;
+  height: 98vw;
   border: 0.5em solid #9EB2C0;
   position: absolute;
   left: 0;
   right: 0;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 7; }
   @media (min-width: 750px) {
     .form_circle {
-      width: 48em;
-      height: 48em; } }
+      width: 60em;
+      height: 60em; } }
+
+.hero-form {
+  word-wrap: break-word;
+  margin: 0;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #2E3641; }
+  @media (min-width: 550px) {
+    .hero-form {
+      margin-bottom: 32px; } }
+  @media (min-width: 750px) {
+    .hero-form {
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.5;
+      font-weight: 700;
+      font-size: 2.5em; } }
 
 .contactform {
   display: flex;
@@ -1195,7 +1261,7 @@
     display: inline;
     opacity: 1; }
 
-/*------------------------main content*/
+/*------------------------ Styled div for noscript tag*/
 noscript {
   background: #fa7f7f;
   text-align: center;
@@ -1204,7 +1270,7 @@ noscript {
   padding: 2.5em;
   z-index: 1000; }
 
-/*------------------------typography*/
+/*------------------------ Typography*/
 h1 {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
@@ -1254,12 +1320,13 @@ input[type=submit] {
   font-family: "Montserrat", sans-serif;
   text-decoration: none; }
 
+/*------------------------ Main content*/
 html {
   height: 100%; }
 
 body {
   font-family: "Playfair Display", serif;
-  background: #fa7f7f;
+  background: #2E3641;
   min-height: 100%; }
 
 .wrapper {
@@ -1269,12 +1336,10 @@ body {
   align-items: center;
   background: #2E3641;
   height: auto;
-  table-layout: fixed;
   min-height: 100vh;
-  width: 100%;
-  max-width: 1200px;
   overflow-x: hidden;
   table-layout: fixed;
+  width: 100%;
   max-width: 2560px;
   margin: 0 auto; }
 
@@ -1286,19 +1351,7 @@ body {
 .footer span {
   text-align: center; }
 
-.logo {
-  height: 100%;
-  width: 4em; }
-  .logo:hover {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2); }
-  @media (min-width: 550px) {
-    .logo {
-      width: 5em; } }
-
+/*------------------------ Fixed header */
 header {
   display: flex;
   align-self: center;
@@ -1307,11 +1360,10 @@ header {
   left: 0;
   right: 0; }
 
+/*------------------------ Fixed header */
 .header {
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
   align-items: center;
   width: 80%;
   max-width: 1200px;
