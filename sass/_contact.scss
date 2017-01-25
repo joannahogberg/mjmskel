@@ -170,7 +170,7 @@
 }
 
 .contact-text {
-    font-size: 0.5rem;
+    font-size: 0.9rem;
     @include transform(rotate(-25deg));
     @include breakpoint(small) {
         @include transform(rotate(25deg));
@@ -204,7 +204,7 @@
         top: 0%;
     }
     to {
-        top: 100%;
+        top: 105%;
     }
 }
 

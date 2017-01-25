@@ -867,7 +867,7 @@
   text-align: center; }
 
 .contact-text {
-  font-size: 0.5rem;
+  font-size: 0.9rem;
   -webkit-transform: rotate(-25deg);
   -moz-transform: rotate(-25deg);
   -ms-transform: rotate(-25deg);
@@ -906,27 +906,27 @@
   from {
     top: 0%; }
   to {
-    top: 100%; } }
+    top: 105%; } }
 @-moz-keyframes formMove {
   from {
     top: 0%; }
   to {
-    top: 100%; } }
+    top: 105%; } }
 @-ms-keyframes formMove {
   from {
     top: 0%; }
   to {
-    top: 100%; } }
+    top: 105%; } }
 @-o-keyframes formMove {
   from {
     top: 0%; }
   to {
-    top: 100%; } }
+    top: 105%; } }
 @keyframes formMove {
   from {
     top: 0%; }
   to {
-    top: 100%; } }
+    top: 105%; } }
 .form_container {
   display: flex;
   justify-content: center;
