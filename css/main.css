@@ -478,8 +478,8 @@
 /*------------------------navigation*/
 /* Mobile Navigation */
 #menu {
-  height: 5.5em;
-  width: 4em;
+  height: 6em;
+  width: 4.5em;
   position: fixed;
   top: 0.5em;
   right: 24px;
@@ -488,9 +488,11 @@
   cursor: pointer; }
   @media (min-width: 550px) {
     #menu {
-      height: 6em;
-      width: 4.5em;
-      top: -0.5em;
+      height: 9em;
+      width: 5em;
+      top: -0.5em; } }
+  @media (min-width: 750px) {
+    #menu {
       visibility: hidden; } }
 
 .overlay {
@@ -532,12 +534,9 @@
   padding: 8px;
   text-decoration: none;
   color: white;
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1.5;
   transition: 0.5s; }
-  @media (min-width: 750px) {
-    .overlay a {
-      font-size: 2em; } }
 
 .overlay a:hover,
 .overlay a:focus {
@@ -549,8 +548,12 @@
   margin: 1em; }
 
 .header_nav {
-  visibility: hidden; }
-  @media (min-width: 550px) {
+  visibility: hidden;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5em;
+  width: 100%; }
+  @media (min-width: 750px) {
     .header_nav {
       visibility: visible; } }
 
@@ -605,6 +608,18 @@
     animation-fill-mode: forwards;
     animation-iteration-count: 1; } }
 
+.nav_link {
+  margin-right: 48px; }
+  .nav_link:last-child {
+    margin-right: 24px; }
+
+.header_nav a {
+  color: #c2fcd9; }
+
+.header_nav a:hover,
+.header_nav a:focus {
+  color: white; }
+
 .yellow_topbox {
   background: #f8fba2;
   position: relative;
@@ -612,7 +627,7 @@
   width: 180vw;
   height: 40rem;
   margin: 0 auto;
-  margin-top: 5em;
+  margin-top: 7em;
   z-index: 2;
   -webkit-transform: rotate(25deg);
   -moz-transform: rotate(25deg);
@@ -1291,8 +1306,17 @@ body {
   text-align: center; }
 
 .logo {
-  height: 5.5em;
+  height: 100%;
   width: 4em; }
+  .logo:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+  @media (min-width: 550px) {
+    .logo {
+      width: 5em; } }
 
 header {
   display: flex;
@@ -1303,9 +1327,18 @@ header {
   right: 0; }
 
 .header {
-  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
   max-width: 1200px;
   margin: 0 auto;
-  z-index: 9; }
+  z-index: 9;
+  padding: 16px; }
+  @media (min-width: 550px) {
+    .header {
+      width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */

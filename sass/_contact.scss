@@ -5,7 +5,7 @@
     width: 180vw;
     height: 40rem;
     margin: 0 auto;
-    margin-top: 5em;
+    margin-top: 7em;
     z-index: 2;
     @include transform(rotate(25deg));
     @include breakpoint(medium) {

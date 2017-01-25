@@ -98,8 +98,15 @@ body {
 }
 
 .logo {
-    height: 5.5em;
+    height: 100%;
     width: 4em;
+    &:hover {
+        @include transform(scale(1.2));
+    }
+    // ---------------------- Media queries
+    @include breakpoint(small) {
+        width: 5em;
+    }
 }
 
 header {
@@ -112,8 +119,17 @@ header {
 }
 
 .header {
-    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
     max-width: 1200px;
     margin: 0 auto;
     z-index: 9;
+    padding: $gutter;
+    @include breakpoint(small) {
+        width: 100%;
+    }
 }
