@@ -7,7 +7,7 @@
   background: $yellow;
   width: 180vw;
   height: 20em;
-  margin-top: 12rem;
+  margin-top: 14rem;
   @include transform(rotate(25deg));
   //query
   @include breakpoint(small) {
@@ -55,7 +55,6 @@
   width: 100%;
   height: 25%;
 }
-
 
 //Elements with images and text about the employee
 @include keyframe(figure-start) {
@@ -137,7 +136,7 @@
     }
     //Id for every persons profile-figure.
     &#max {
-      background: url('../images/max2.jpg');
+      background: url('../images/max3.jpg');
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -147,7 +146,7 @@
       background-size: contain;
     }
     &#magnus {
-      background: url('../images/magnus2.jpg');
+      background: url('../images/magnus3.jpg');
       background-repeat: no-repeat;
       background-size: contain;
     }

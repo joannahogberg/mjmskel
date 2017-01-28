@@ -15,7 +15,7 @@
   background: #f8fba2;
   width: 180vw;
   height: 20em;
-  margin-top: 12rem;
+  margin-top: 14rem;
   -webkit-transform: rotate(25deg);
   -moz-transform: rotate(25deg);
   -ms-transform: rotate(25deg);
@@ -225,7 +225,7 @@
       height: 100%;
       width: 100%; }
     .figure.is-active#max {
-      background: url("../images/max2.jpg");
+      background: url("../images/max3.jpg");
       background-repeat: no-repeat;
       background-size: contain; }
     .figure.is-active#joanna {
@@ -233,7 +233,7 @@
       background-repeat: no-repeat;
       background-size: contain; }
     .figure.is-active#magnus {
-      background: url("../images/magnus2.jpg");
+      background: url("../images/magnus3.jpg");
       background-repeat: no-repeat;
       background-size: contain; }
 
@@ -1136,6 +1136,7 @@
     transform: translate(0, 10%); }
   @media (min-width: 550px) {
     .about-box {
+      height: 28rem;
       -webkit-transform: rotate(25deg) translate(-45%);
       -moz-transform: rotate(25deg) translate(-45%);
       -ms-transform: rotate(25deg) translate(-45%);
@@ -1163,6 +1164,8 @@
   font-size: 2.5em;
   margin: 0 2em 1em 0;
   cursor: pointer; }
+  .about-h1:hover {
+    color: #CCD7E4; }
   .about-h1.is-active {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
