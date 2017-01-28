@@ -88,10 +88,26 @@ body {
     margin: 0 auto;
 }
 
+// .footer {
+//     color: $light-gray;
+//     background: $dark-gray;
+//     padding: 3em;
+// }
+// .footer span {
+//     text-align: center;
+// }
+
+/*------------------------- Footer*/
+
 .footer {
+    @include flex-center;
+    padding: $gutter;
+    padding-top: $gutter *1.5;
     color: $light-gray;
-    background: $dark-gray;
-    padding: 3em;
+}
+
+.link {
+    color: $light-gray;
 }
 
 .footer span {

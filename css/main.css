@@ -1346,10 +1346,17 @@ body {
   max-width: 2560px;
   margin: 0 auto; }
 
+/*------------------------- Footer*/
 .footer {
-  color: #CCD7E4;
-  background: #2E3641;
-  padding: 3em; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  padding-top: 24px;
+  color: #CCD7E4; }
+
+.link {
+  color: #CCD7E4; }
 
 .footer span {
   text-align: center; }
