@@ -45,6 +45,7 @@
   }
   //queries
   @include breakpoint(small){
+    height:28rem;
     @include transform(rotate(25deg) translate(-45%));
   };
   @include breakpoint(large){
@@ -59,6 +60,10 @@
   @include heading-2;
   margin: 0 2em 1em 0;
   cursor: pointer;
+
+  &:hover {
+    color:$light-gray;
+  }
 
   &.is-active {
     @include transition(all 1s ease);

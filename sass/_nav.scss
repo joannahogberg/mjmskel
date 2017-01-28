@@ -1,24 +1,38 @@
-    /*------------------------navigation*/
-    /* Mobile Navigation */
+    /*------------------------ Navigation*/
+    /*------------------------ Hamburger icon*/
     
     #menu {
-        height: 5.5em;
-        width: 4em;
+        height: 6em;
+        width: 4.5em;
         position: fixed;
-        // top: -0.3em;
         top: 0.5em;
         right: $main-margin;
-        /* z-index 11 to alwaus stay on top*/
         z-index: 1111;
         cursor: pointer;
         // ---------------------- Media queries
         @include breakpoint(small) {
-            height: 6em;
-            width: 4.5em;
+            height: 9em;
+            width: 5em;
             top: -0.5em;
+        }
+        @include breakpoint(medium) {
             visibility: hidden;
         }
     }
+    /*----------------------- MJM  logo*/
+    
+    .logo {
+        height: 100%;
+        width: 4em;
+        &:hover {
+            @include transform(scale(1.2));
+        }
+        // ---------------------- Media queries
+        @include breakpoint(small) {
+            width: 5em;
+        }
+    }
+    /*------------------------ Mobile Navigation that shows as a full-screen overlay */
     
     .overlay {
         height: 100%;
@@ -45,15 +59,10 @@
     
     .overlay a {
         padding: $gutter /2;
-        text-decoration: none;
         color: white;
-        font-size: 2rem;
+        font-size: 2.5rem;
         line-height: 1.5;
         transition: 0.5s;
-        // ---------------------- Media queries
-        @include breakpoint(medium) {
-            font-size: 2em;
-        }
     }
     
     .overlay a:hover,
@@ -66,14 +75,36 @@
         height: 1.5em;
         margin: 1em;
     }
+    /*------------------------ Primary navigation in header */
     
     .header_nav {
         visibility: hidden;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1.5em;
+        width: 100%;
         // ---------------------- Media queries
-        @include breakpoint(small) {
+        @include breakpoint(medium) {
             visibility: visible;
         }
     }
+    
+    .nav_link {
+        margin-right: $main-margin * 2;
+        &:last-child {
+            margin-right: $main-margin;
+        }
+    }
+    
+    .header_nav a {
+        color: $light-green;
+    }
+    
+    .header_nav a:hover,
+    .header_nav a:focus {
+        color: white;
+    }
+    /*------------------------ Animation for background when page is scrolled */
     
     @include keyframe (head-fade) {
         from {
@@ -85,7 +116,7 @@
     }
     
     .nav_background {
-        @include breakpoint(small) {
+        @include breakpoint(medium) {
             width: 100%;
             background: $dark-gray;
             @include animation(head-fade, 2s, forwards, 1);
