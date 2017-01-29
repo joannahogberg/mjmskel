@@ -38,7 +38,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    //height:66.5em;
     height:auto;
     margin:0 0 10em 0;
     @include transform(translate(0, 10%));
@@ -47,9 +46,11 @@
   @include breakpoint(small){
     height:28rem;
     @include transform(rotate(25deg) translate(-45%));
+    margin-top:$gutter * 12;
   };
+
   @include breakpoint(large){
-    margin-top:$gutter * 10;
+    margin-top:$gutter * 13;
   };
 }
 
