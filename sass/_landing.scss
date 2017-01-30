@@ -14,8 +14,11 @@
     margin-top: $gutter * 8;
     height: 30rem;
   };
+  @include breakpoint(medium){
+    margin-top:$gutter * 16;
+  };
   @include breakpoint(large) {
-    margin-top:15rem;
+    margin-top:28rem;
   };
 }
 
@@ -39,10 +42,13 @@
     height: 40rem;
     width: 40rem;
   }
-
+  @include breakpoint(medium){
+    height:50rem;
+    width:50rem;
+  };
   @include breakpoint(xlarge){
-    height:40rem;
-    width: 40rem;
+    height:50rem;
+    width: 50rem;
   };
 }
 
@@ -110,6 +116,10 @@
   @include breakpoint(small){
     background: none;
   };
+  @include breakpoint(medium){
+    height:8em;
+    width:8em;
+  };
 
   &:first-child {
     left: 25%;
@@ -157,8 +167,6 @@
 .hover-figure {
   @include breakpoint(small){
     &:hover {
-      height: 7em;
-      width: 7em;
       background: $light-gray;
       color: black;
     }
@@ -236,6 +244,9 @@
   @include breakpoint(xsmall){
     bottom: 17em;
   };
+  @include breakpoint(medium){
+    bottom: 23em;
+  };
 }
 
 //Icon that is pressed to go bacm from profile.
@@ -271,7 +282,6 @@
   text-align: left;
   word-wrap: break-word;
   width: 80%;
-
   position: absolute;
   left: -24%;
   top: 30%;
@@ -291,6 +301,11 @@
   }
   @include breakpoint(xsmall){
     left: -20%;
+  };
+  @include breakpoint(medium){
+    left: -10%;
+    font-size:110%;
+    top:35%;
   };
 }
 
@@ -317,6 +332,12 @@
   @include breakpoint(small){
     left: -3%;
     top:5%;
+    letter-spacing: 0.3em;
+  };
+  @include breakpoint(medium){
+    left: -12%;
+    top:5%;
+    font-size:150%;
   };
 }
 
@@ -333,26 +354,30 @@
     margin: 0 3em 0 3em;
     text-align: center;
     line-height: 1.5;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+
+    @include breakpoint(medium){
+      font-size: 2rem;
+    };
+    @include breakpoint(xlarge){
+      font-size: 2.3rem;
+    };
 }
 
 //letter MJM in figures.
 .hero-h1 {
-    //absolut?
-    //position: static;
     align-self: center;
     font-size: 3em;
     margin: 0;
     @include transform(rotate(25deg));
     @media screen and (min-width:360px){
       font-size: 5em;
-    }
-    @include breakpoint(xsmall){
-      font-size: 5em;
     };
 
+    @include breakpoint(medium){
+      font-size:6em;
+    };
     &.active {
-        //@include transition(all 0.5s ease);
         opacity: 0;
     }
 }

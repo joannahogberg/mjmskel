@@ -1,0 +1,145 @@
+//animation for about.
+@include keyframe (fade) {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@include keyframe (fade-out) {
+  from {
+    opacity: 1;
+    display: flex;
+  }
+  to {
+    opacity: 0;
+    display:none;
+
+  }
+}
+
+//section for work.
+.work-box {
+  position:relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height:20rem;
+  width: 180vw;
+  background: $light-green;
+  margin-top: $gutter * 10;
+  @include transition(all 1.2s ease);
+  @include transform(rotate(25deg) translate(-20%,0));
+  text-align: left;
+
+  &.is-active {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height:auto;
+    margin:0 0 10em 0;
+    @include transform(translate(0, 10%));
+  }
+  //queries
+  @include breakpoint(small){
+    height:28rem;
+    @include transform(rotate(25deg) translate(-45%));
+    margin-top:$gutter * 12;
+  };
+
+  @include breakpoint(large){
+    margin-top:$gutter * 13;
+  };
+}
+
+#work-fix {
+  color:$dark-gray;
+  @include transform(rotate(-25deg));
+  @include transition(all 1s ease);
+  @include heading-2;
+  margin: 0 2em 1em 0;
+  cursor: pointer;
+
+  &:hover {
+    color:$light-gray;
+  }
+
+  &.is-active {
+    @include transition(all 1s ease);
+    @include transform(rotate(0));
+    margin: 0;
+    @include breakpoint(medium){
+      margin:1em;
+    };
+  }
+}
+
+.work-h4 {
+    margin-top: 1rem;
+  text-align: left;
+  line-height: 1em;
+  margin: 0.7em 0 0.7em 0;
+    color: $dark-gray;
+}
+
+.work-article {
+  @include transition(all 1s ease);
+  width: 100vw;
+  margin:0;
+  opacity: 0;
+  display: none;
+  background:white;
+
+  &.is-active {
+    @include animation(fade, 1s, forwards, 1);
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.work-img{
+}
+
+.work-container {
+  height:auto;
+}
+
+.work-p {
+  font-family:$text-face;
+}
+
+.work-img {
+  margin-bottom: 1em;
+}
+
+.bggreen{
+background: $light-green;
+}
+.bgred{
+background: $red;
+}
+
+.bggray{
+background: $light-gray;
+}
+.bgyellow{
+background: $yellow;
+}
+
+
+.info-container{
+           display: inline-block;
+           vertical-align: top;
+           padding: 0px;
+           -moz-box-sizing: border-box;
+           -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+      p{
+           padding: 0;
+           margin: 0;
+       }
+}
