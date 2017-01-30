@@ -1600,14 +1600,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 16px;
   padding-top: 24px;
   color: #CCD7E4; }
 
 .link {
   color: #CCD7E4; }
+  .link:hover {
+    color: white; }
 
-.footer span {
+.footer h6 {
   text-align: center; }
 
 /*------------------------ Fixed header */
